@@ -557,7 +557,7 @@ body {
 
 .pie p { margin: 0; }
 
-.pie-linea1 {
+.pie .pie-linea1 {
   font-size: 1.08rem;
   line-height: 1.45;
   max-width: 860px;
