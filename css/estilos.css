@@ -1,0 +1,508 @@
+/* ============================================================
+   GEOGALICIA: ROTEIRO LAB ATLÁNTICO — estilos
+   Estilo sencillo: fondo blanco, letras oscuras, acentos azules.
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  line-height: 1.55;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e9f0;
+  flex-wrap: wrap;
+}
+
+.cabecera .logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(15, 50, 80, 0.18);
+  border: 1px solid #e3e8ef;
+}
+
+.cabecera-texto h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.4px;
+  color: #143c5c;
+}
+
+.cabecera-texto .subtitulo {
+  margin: 0;
+  color: #5b6b7b;
+  font-size: 0.95rem;
+}
+
+.cabecera-datos {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.dato-clave {
+  background: #eef5fb;
+  border: 1px solid #d4e6f5;
+  color: #0f6db1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---------- Contenedor general ---------- */
+.contenedor {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 26px 20px 30px;
+}
+
+/* ---------- Títulos de bloque ---------- */
+.titulo-bloque {
+  font-size: 1.4rem;
+  color: #143c5c;
+  margin: 38px 0 8px;
+  padding-left: 12px;
+  border-left: 4px solid #0f6db1;
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin: 18px 0;
+  box-shadow: 0 1px 3px rgba(15, 50, 80, 0.06);
+}
+
+.tarjeta h2 {
+  font-size: 1.2rem;
+  color: #143c5c;
+  margin: 0 0 10px;
+}
+
+.cuerpo-texto p {
+  margin: 0 0 10px;
+}
+
+.cuerpo-texto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Avisos ---------- */
+.aviso {
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 18px 0;
+  border: 1px solid;
+}
+
+.aviso h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.aviso-plazo {
+  background: #fff8e1;
+  border-color: #f2d58c;
+  border-left: 5px solid #e8b43b;
+}
+
+.aviso-plazo h2 { color: #7a5200; }
+
+.aviso-votacion {
+  background: #eef6ff;
+  border-color: #c8e0f5;
+  border-left: 5px solid #0f6db1;
+}
+
+.aviso-votacion h2 { color: #0b4f8a; }
+
+.aviso-whatsapp {
+  margin-top: 16px;
+  background: #f0faf5;
+  border: 1px solid #cdeeda;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.aviso-whatsapp .emoji { font-size: 1.3rem; }
+
+.aviso-whatsapp > div { flex: 1; min-width: 240px; }
+
+/* ---------- Botón copiar ---------- */
+.btn-copiar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eaf4fc;
+  color: #0b5f9e;
+  border: 1px solid #bcdbf3;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.btn-copiar:hover { background: #d8ecfb; }
+
+.btn-copiar:active { transform: scale(0.97); }
+
+.btn-copiar.copiado {
+  background: #e2f5e6;
+  color: #1d7a3a;
+  border-color: #b7e2c2;
+}
+
+.btn-mini { padding: 5px 9px; border-radius: 6px; font-size: 0.8rem; }
+
+/* ---------- Mapa y listado (dos columnas) ---------- */
+.grid-mapa {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: 18px;
+  margin: 14px 0 4px;
+}
+
+.mapa-grande {
+  height: clamp(480px, 78vh, 760px);
+  border-radius: 12px;
+  border: 1px solid #e3e8ef;
+  z-index: 0;
+}
+
+.lista-coordenadas {
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  padding: 16px;
+  max-height: clamp(480px, 78vh, 760px);
+  overflow-y: auto;
+}
+
+.cabecera-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.cabecera-lista h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: #143c5c;
+}
+
+.cabecera-lista h4 {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  color: #143c5c;
+}
+
+.cabecera-lista p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #6b7a8c;
+}
+
+.lista-puntos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fila-coord {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 4px;
+  border-bottom: 1px dashed #e6ebf2;
+}
+
+.fila-coord:last-child { border-bottom: none; }
+
+.fila-num {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0f6db1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.fila-etapa { background: #d97706; }
+
+.fila-coords {
+  flex: 1;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.85rem;
+  color: #24313f;
+  word-break: break-word;
+}
+
+/* ---------- Pasos de las instrucciones ---------- */
+.paso {
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 16px 0;
+  box-shadow: 0 1px 3px rgba(15, 50, 80, 0.05);
+}
+
+.paso-cabecera {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.paso-num {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #143c5c;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paso h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  color: #143c5c;
+}
+
+/* Valor para copiar (nombre del lab) */
+.valor-copiar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #f4f7fb;
+  border: 1px dashed #c6d6e8;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-top: 8px;
+}
+
+.valor-copiar code {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0b5f9e;
+  font-family: inherit;
+}
+
+/* Descripción común */
+.marco-descripcion {
+  background: #fbfcfe;
+  border: 1px solid #e3e8ef;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 8px;
+}
+
+.marco-descripcion .cuerpo-texto p { margin: 0 0 8px; }
+
+.marco-descripcion .btn-copiar { margin-top: 10px; }
+
+.nota-archivo {
+  font-size: 0.8rem;
+  color: #6b7a8c;
+  margin: 6px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Imagen de portada */
+.figura-logo {
+  margin: 14px 0 0;
+  text-align: center;
+}
+
+.figura-logo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #e3e8ef;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  background: #eef3f8;
+}
+
+.figura-logo figcaption {
+  font-size: 0.8rem;
+  color: #6b7a8c;
+  margin-top: 8px;
+}
+
+/* Chips de temas */
+.chips {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: #ffffff;
+  border: 1px solid #c6d6e8;
+  color: #2b4257;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.chip:hover:not(.activo) { background: #eef5fb; }
+
+.chip.activo {
+  background: #0f6db1;
+  color: #ffffff;
+  border-color: #0f6db1;
+}
+
+/* Mapa de las etapas */
+.mapa-pequeno {
+  height: 420px;
+  border-radius: 12px;
+  border: 1px solid #e3e8ef;
+  margin: 14px 0 12px;
+  z-index: 0;
+}
+
+.lista-etapas { max-height: 300px; margin-top: 10px; }
+
+.nota-radio {
+  font-size: 0.85rem;
+  color: #5b6b7b;
+  margin: 10px 0 0;
+}
+
+/* ---------- Marcadores del mapa ---------- */
+.icono-punto {
+  background: transparent;
+  border: none;
+}
+
+.punto-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0f6db1;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+  transition: transform 0.12s;
+}
+
+.punto-num:hover { transform: scale(1.15); }
+
+.punto-etapa { background: #d97706; }
+
+/* Popups del mapa */
+.leaflet-popup-content {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.popup-lab .popup-titulo { margin-bottom: 4px; }
+
+.popup-coords {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  background: #f4f7fb;
+  border: 1px solid #e3e8ef;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: 6px 0 8px;
+  color: #24313f;
+}
+
+/* ---------- Errores ---------- */
+#banner-error {
+  display: none;
+  background: #fdecea;
+  border: 1px solid #f5c6c0;
+  color: #8a2f2f;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 0.9rem;
+}
+
+#banner-error.visible { display: block; }
+
+.error-mapa {
+  padding: 30px 20px;
+  text-align: center;
+  color: #8a2f2f;
+  background: #fdf3f2;
+  border-radius: 10px;
+}
+
+/* ---------- Pie ---------- */
+.pie {
+  max-width: 1180px;
+  margin: 34px auto 0;
+  padding: 22px 20px 34px;
+  border-top: 1px solid #e5e9f0;
+  text-align: center;
+  color: #6b7a8c;
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 920px) {
+  .grid-mapa { grid-template-columns: 1fr; }
+  .mapa-grande { height: 60vh; min-height: 400px; }
+  .lista-coordenadas { max-height: none; }
+  .cabecera-datos { display: none; }
+  .mapa-pequeno { height: 340px; }
+  .cabecera { justify-content: center; text-align: center; }
+}

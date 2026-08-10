@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoGalicia: Roteiro Lab Atlántico</title>
+  <meta name="description" content="Instrucciones para los 29 equipos participantes en el geoart GeoGalicia: Roteiro Lab Atlántico (61 Adventure Labs).">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230f6db1'/%3E%3Ctext x='50' y='66' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EG%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header class="cabecera">
+    <img src="images/logo.png" alt="Logo de GeoGalicia" class="logo"
+         onerror="this.style.display='none'">
+    <div class="cabecera-texto">
+      <h1 data-texto="titulo"></h1>
+      <p class="subtitulo" data-texto="subtitulo"></p>
+    </div>
+    <div class="cabecera-datos">
+      <span class="dato-clave">29 equipos</span>
+      <span class="dato-clave">61 Adventure Labs</span>
+      <span class="dato-clave">1 palabra: GALICIA</span>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <!-- Aviso de error al cargar datos (solo visible si algo falla) -->
+    <div id="banner-error" role="alert">
+      ⚠️ No se han podido cargar los datos (datos/puntos.txt, datos/descripcion.txt o datos/etapas.txt).
+      Comprueba que la página se está sirviendo desde un servidor web (p. ej. GitHub Pages) y no abierta como archivo local.
+    </div>
+
+    <!-- 1. Introducción -->
+    <section class="tarjeta" id="introduccion" aria-labelledby="introduccion-titulo">
+      <h2 id="introduccion-titulo" data-texto="introTitulo"></h2>
+      <div class="cuerpo-texto" id="texto-intro"></div>
+      <button type="button" class="btn-copiar" data-copiar="texto-intro">📋 Copiar texto de introducción</button>
+      <div class="aviso-whatsapp">
+        <span class="emoji" aria-hidden="true">📱</span>
+        <div class="cuerpo-texto" id="texto-whatsapp"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-whatsapp">📋 Copiar</button>
+      </div>
+    </section>
+
+    <!-- 2. Mapa del geoart + listado de coordenadas -->
+    <section id="seccion-mapa" aria-labelledby="mapa-titulo">
+      <div class="cabecera-seccion">
+        <h2 id="mapa-titulo" data-texto="mapaTitulo"></h2>
+        <p class="cuerpo-texto" data-texto="mapaSub" id="texto-mapa-sub"></p>
+      </div>
+      <div class="grid-mapa">
+        <div id="mapa-geoart" class="mapa-grande" role="application"
+             aria-label="Mapa del geoart con los 61 puntos del proyecto"></div>
+        <aside class="lista-coordenadas" aria-label="Listado de las coordenadas de los 61 puntos">
+          <div class="cabecera-lista">
+            <div>
+              <h3 data-texto="listaTitulo"></h3>
+              <p data-texto="listaNota"></p>
+            </div>
+            <button type="button" class="btn-copiar" id="btn-copiar-todas">📋 Copiar todas</button>
+          </div>
+          <ol class="lista-puntos" id="lista-puntos"></ol>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Aviso del plazo (antes de las instrucciones) -->
+    <section class="aviso aviso-plazo" id="aviso-plazo" aria-labelledby="plazo-titulo">
+      <h2 id="plazo-titulo" data-texto="plazoTitulo"></h2>
+      <div class="cuerpo-texto" id="texto-plazo"></div>
+      <button type="button" class="btn-copiar" data-copiar="texto-plazo">📋 Copiar</button>
+    </section>
+
+    <!-- Votación del idioma -->
+    <section class="aviso aviso-votacion" id="votacion" aria-labelledby="votacion-titulo">
+      <h2 id="votacion-titulo" data-texto="votacionTitulo"></h2>
+      <div class="cuerpo-texto" id="texto-votacion"></div>
+      <button type="button" class="btn-copiar" data-copiar="texto-votacion">📋 Copiar</button>
+    </section>
+
+    <!-- 3. Instrucciones para el Adventure Lab -->
+    <section id="instrucciones-lab" aria-labelledby="instrucciones-lab-titulo">
+      <h2 class="titulo-bloque" id="instrucciones-lab-titulo" data-texto="instruccionesLabTitulo"></h2>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">1</span>
+          <h3 data-texto="labNombreTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-lab-nombre"></div>
+        <div class="valor-copiar">
+          <code id="valor-nombre-lab">GeoGalicia: Roteiro Lab Atlántico #XX</code>
+          <button type="button" class="btn-copiar" data-copiar="valor-nombre-lab">📋 Copiar</button>
+        </div>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">2</span>
+          <h3 data-texto="labDescripcionTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-lab-descripcion"></div>
+        <div class="marco-descripcion">
+          <p class="nota-archivo">📄 datos/descripcion.txt</p>
+          <div class="cuerpo-texto" id="descripcion-texto"></div>
+          <button type="button" class="btn-copiar" data-copiar="descripcion-texto">📋 Copiar descripción</button>
+        </div>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">3</span>
+          <h3 data-texto="labImagenTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-lab-imagen"></div>
+        <figure class="figura-logo">
+          <img src="images/logo.png" alt="Imagen de portada común (images/logo.png)">
+          <figcaption>images/logo.png — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
+        </figure>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">4</span>
+          <h3 data-texto="labTemaTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-lab-tema"></div>
+        <div class="chips" id="temas-chips" aria-label="Lista de temas del Adventure Lab"></div>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">5</span>
+          <h3 data-texto="labInicioTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-lab-inicio"></div>
+      </article>
+    </section>
+
+    <!-- 4. Instrucciones para las etapas -->
+    <section id="instrucciones-etapas" aria-labelledby="instrucciones-etapas-titulo">
+      <h2 class="titulo-bloque" id="instrucciones-etapas-titulo" data-texto="instruccionesEtapasTitulo"></h2>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">0</span>
+          <h3 data-texto="etapaSecuencialTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-secuencial"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-secuencial">📋 Copiar</button>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">1</span>
+          <h3 data-texto="etapaNombreTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-nombre"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-nombre">📋 Copiar</button>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">2</span>
+          <h3 data-texto="etapaDescripcionTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-descripcion"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-descripcion">📋 Copiar</button>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">3</span>
+          <h3 data-texto="etapaImagenTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-imagen"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-imagen">📋 Copiar</button>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">4</span>
+          <h3 data-texto="etapaCoordenadasTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-coordenadas"></div>
+        <div id="mapa-etapas" class="mapa-pequeno" role="application"
+             aria-label="Mapa con la propuesta de coordenadas de las 5 etapas en la Plaza del Obradoiro"></div>
+        <div class="lista-coordenadas lista-etapas">
+          <div class="cabecera-lista">
+            <div>
+              <h4>Coordenadas de las 5 etapas (datos/etapas.txt)</h4>
+            </div>
+            <button type="button" class="btn-copiar" id="btn-copiar-etapas">📋 Copiar todas</button>
+          </div>
+          <ol class="lista-puntos" id="lista-etapas"></ol>
+        </div>
+        <p class="nota-radio" id="nota-radio"></p>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">5</span>
+          <h3 data-texto="etapaDistanciaTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-distancia"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-distancia">📋 Copiar</button>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">6</span>
+          <h3 data-texto="etapaPreguntaTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-pregunta"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-pregunta">📋 Copiar</button>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">7</span>
+          <h3 data-texto="etapaCompletadoTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-completado"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-completado">📋 Copiar</button>
+      </article>
+
+      <article class="paso">
+        <div class="paso-cabecera">
+          <span class="paso-num" aria-hidden="true">8</span>
+          <h3 data-texto="etapaGuardarTitulo"></h3>
+        </div>
+        <div class="cuerpo-texto" id="texto-etapa-guardar"></div>
+        <button type="button" class="btn-copiar" data-copiar="texto-etapa-guardar">📋 Copiar</button>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p data-texto="pieTexto"></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+  <script src="datos/textos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
