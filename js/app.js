@@ -23,11 +23,19 @@
       .replace(/"/g, '&quot;');
   }
 
+  /* Convierte las URLs en enlaces clicables (después de escapar) */
+  function enlazar(texto) {
+    return String(texto).replace(
+      /(https?:\/\/[^\s<]+)/g,
+      '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+  }
+
   /* Convierte un texto en párrafos: línea en blanco = párrafo nuevo */
   function aHtml(texto) {
     return String(texto)
       .split(/\n\s*\n/)
-      .map((p) => '<p>' + escapar(p).replace(/\n/g, '<br>') + '</p>')
+      .map((p) => '<p>' + enlazar(escapar(p).replace(/\n/g, '<br>')) + '</p>')
       .join('');
   }
 
