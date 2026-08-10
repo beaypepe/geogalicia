@@ -33,6 +33,15 @@ geogalicia/
 | Coordenadas y radio de las 5 etapas        | `datos/etapas.txt`    |
 | Imagen de portada                          | `images/logo.png`     |
 
+> **Importante sobre los textos:** el contenido visible también está
+> incrustado en `index.html` para que la página se vea bien en cualquier
+> sitio (incluso sin JavaScript). Pero la fuente de verdad al cargar la
+> página es `datos/textos.js`: **edita siempre los textos en
+> `datos/textos.js`**, no a mano dentro del HTML, porque al abrir la
+> página los textos del archivo sobrescriben al HTML. Cuando se cambie
+> un texto en `textos.js`, hay que actualizar también la copia del HTML
+> para que ambas coincidan (lo puede hacer el administrador de la web).
+
 ### datos/puntos.txt
 Una línea por punto: `número | coordenadas en formato geocaching`.
 Las líneas que empiezan por `#` son comentarios.
