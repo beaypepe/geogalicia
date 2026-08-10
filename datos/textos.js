@@ -16,8 +16,7 @@
 window.TEXTOS = {
 
   /* ---------- Cabecera ---------- */
-  titulo: "GeoGalicia",
-  subtitulo: "Roteiro Lab Atlántico",
+  cabeceraTexto: "GEOGALICIA - ROTEIRO LAB ATLÁNTICO",
 
   /* ---------- Introducción ---------- */
   introTitulo: "¿Qué es esta página?",
@@ -91,9 +90,7 @@ Elegid vuestro número en el desplegable y se mostrarán las coordenadas de inic
 Como referencia: el geoart de Portugal está formado por etapas secuenciales y el de Catalunya por etapas no secuenciales. Estaría bien ponernos de acuerdo para que todas sean iguales, secuenciales o no.`,
 
   etapaNombreTitulo: "Nombre de la etapa",
-  etapaNombreTexto: `Cada uno pondrá el nombre que quiera a cada etapa, acorde con la pregunta o la temática que vaya a utilizar. Ha de ser un texto de 50 caracteres como máximo.
-
-Recordatorio: XX son los dos dígitos del número del lab en cuestión (del 01 al 61).`,
+  etapaNombreTexto: `Cada uno pondrá el nombre que quiera a cada etapa, acorde con la pregunta o la temática que vaya a utilizar. Ha de ser un texto de 50 caracteres como máximo.`,
 
   etapaDescripcionTitulo: "Descripción de la etapa",
   etapaDescripcionTexto: `Cada uno pondrá lo que quiera en la descripción de su etapa: un texto de 2000 caracteres como máximo, en el idioma que se haya votado.
@@ -109,8 +106,6 @@ Consejo: la mayoría de la gente se saltará esta descripción, sobre todo si la
 La idea es que las etapas de TODOS los labs estén en la Plaza del Obradoiro, con las mismas cinco coordenadas, formando una X en el centro de la plaza.
 
 Además, si le ponemos un radio de 100 metros a cada etapa, se podrá hacer desde cualquier punto de la plaza, incluso bajo los soportales del Concello, por si acaso alguien quiere hacer el geoart un día de lluvia (cosa bastante habitual en Santiago).
-
-Pondremos un mapa como el del principio, con estas etapas, con un zoom de 17 para que se vea bien.
 
 Luego viene la distancia, que en principio será de 100 metros, y así se podrá hacer desde cualquier punto de la plaza. Si la gente prefiere otra distancia para que se pueda hacer desde alguna cafetería cercana, es cuestión de proponerlo en el grupo de WhatsApp.`,
 

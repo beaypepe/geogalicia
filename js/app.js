@@ -235,7 +235,7 @@
     puntos.forEach((p) => {
       const op = document.createElement('option');
       op.value = p.num;
-      op.textContent = 'Punto ' + p.num;
+      op.textContent = 'GeoGalicia: Roteiro Lab Atlántico #' + p.num;
       sel.appendChild(op);
     });
     const resultado = $('#inicio-resultado');

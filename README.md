@@ -7,11 +7,13 @@ de 61 Adventure Labs que dibuja la palabra **GALICIA** sobre el Atlántico.
 
 ```
 geogalicia/
-├── index.html            → Página principal (estructura)
+├── index.html            → Página principal (estructura y textos visibles)
 ├── css/
 │   └── estilos.css       → Estilos (fondos blancos, letras oscuras)
 ├── js/
 │   └── app.js            → Lógica: mapas, listados, botones de copiar
+├── fonts/
+│   └── uralita.otf       → Fuente de la cabecera
 ├── datos/
 │   ├── textos.js         → Todos los textos de la página (editables)
 │   ├── puntos.txt        → Coordenadas de los 61 puntos del geoart
@@ -32,6 +34,7 @@ geogalicia/
 | Coordenadas de los 61 puntos               | `datos/puntos.txt`    |
 | Coordenadas y radio de las 5 etapas        | `datos/etapas.txt`    |
 | Imagen de portada                          | `images/logo.png`     |
+| Fuente de la cabecera (Uralita)            | `fonts/uralita.otf`   |
 
 > **Importante sobre los textos:** el contenido visible también está
 > incrustado en `index.html` para que la página se vea bien en cualquier
