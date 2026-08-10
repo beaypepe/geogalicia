@@ -223,7 +223,7 @@
     const btnTodas = $('#btn-copiar-todas');
     if (btnTodas) {
       btnTodas.dataset.copiarTexto = puntos
-        .map((p) => 'Punto ' + p.num + ': ' + p.cruda)
+        .map((p) => 'GeoGalicia: Roteiro Lab Atlántico #' + p.num + ': ' + p.cruda)
         .join('\n');
     }
   }
@@ -339,13 +339,14 @@
           '<div class="popup-coords">' + escapar(e.cruda) + '</div>' +
           'Radio: ' + e.radio + ' m'
         );
-      L.circle(ll, {
+      const circulo = L.circle(ll, {
         radius: e.radio,
         color: '#d97706',
         weight: 2,
         fillColor: '#d97706',
         fillOpacity: 0.08
       }).addTo(mapa);
+      circulosEtapas.push(circulo);
     });
 
     // Zoom 17 para que la X de la Plaza del Obradoiro se vea bien
@@ -374,23 +375,74 @@
         .join('\n');
     }
 
-    const radios = [...new Set(etapas.map((e) => e.radio))];
-    const nota = $('#nota-radio');
-    if (nota) {
-      nota.innerHTML = 'Radio propuesto: <strong>' + radios.join(' / ') + ' m</strong> (círculos del mapa).';
-    }
-
     construirMapaEtapas(etapas);
+    configurarSelectorRadio(etapas[0].radio);
   }
 
-  /* ---------- Carga de datos ---------- */
+  /* Selector del radio de los círculos del mapa de etapas */
+  function configurarSelectorRadio(radioInicial) {
+    const sel = $('#select-radio');
+    if (!sel) return;
+    const input = $('#radio-custom');
+    const nota = $('#nota-radio');
+    const opciones = [50, 100, 200, 300, 400, 500];
+
+    function aplicar(valor) {
+      const v = Math.max(20, Math.min(500, Math.round(Number(valor) || 100)));
+      circulosEtapas.forEach((c) => c.setRadius(v));
+      if (nota) nota.textContent = 'Radio seleccionado: ' + v + ' m — así se ve hasta dónde llega cada círculo.';
+    }
+
+    sel.addEventListener('change', () => {
+      if (sel.value === 'custom') {
+        input.hidden = false;
+        input.focus();
+        aplicar(input.value || 100);
+      } else {
+        input.hidden = true;
+        aplicar(sel.value);
+      }
+    });
+
+    input.addEventListener('input', () => {
+      const v = parseInt(input.value, 10);
+      if (!isNaN(v)) aplicar(v);
+    });
+
+    // Valor inicial: el radio de las etapas (100 m)
+    if (opciones.indexOf(radioInicial) !== -1) {
+      sel.value = String(radioInicial);
+    } else {
+      sel.value = 'custom';
+      input.hidden = false;
+      input.value = radioInicial;
+    }
+    aplicar(radioInicial);
+  }
+
+  /* ---------- Carga de datos (siempre sin caché) ---------- */
+
+  /* Carga datos/textos.js forzando la última versión (sin caché).
+     Si falla, se siguen usando los textos incrustados en el HTML. */
+  async function cargarTextos() {
+    try {
+      const res = await fetch('datos/textos.js?t=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('textos.js');
+      const texto = await res.text();
+      (0, eval)(texto); // define window.TEXTOS en el ámbito global
+    } catch (err) {
+      console.warn('No se pudo recargar datos/textos.js; se usan los textos del HTML.', err);
+    }
+  }
 
   async function cargarDatos() {
     try {
+      const t = Date.now();
+      const sinCaché = { cache: 'no-store' };
       const [puntosTexto, descripcion, etapasTexto] = await Promise.all([
-        fetch('datos/puntos.txt').then((r) => { if (!r.ok) throw new Error('puntos.txt'); return r.text(); }),
-        fetch('datos/descripcion.txt').then((r) => { if (!r.ok) throw new Error('descripcion.txt'); return r.text(); }),
-        fetch('datos/etapas.txt').then((r) => { if (!r.ok) throw new Error('etapas.txt'); return r.text(); })
+        fetch('datos/puntos.txt?t=' + t, sinCaché).then((r) => { if (!r.ok) throw new Error('puntos.txt'); return r.text(); }),
+        fetch('datos/descripcion.txt?t=' + t, sinCaché).then((r) => { if (!r.ok) throw new Error('descripcion.txt'); return r.text(); }),
+        fetch('datos/etapas.txt?t=' + t, sinCaché).then((r) => { if (!r.ok) throw new Error('etapas.txt'); return r.text(); })
       ]);
 
       rellenarLargo('#descripcion-texto', descripcion);
@@ -412,12 +464,16 @@
   /* ---------- Arranque ---------- */
 
   const mapas = [];
+  const circulosEtapas = [];
   function iniciar() {
-    volcarTextos();
-    cargarDatos().then(() => {
-      // Recalcular el tamaño de los mapas una vez cargados todos los recursos
-      setTimeout(() => mapas.forEach((m) => m && m.invalidateSize()), 250);
-    });
+    cargarTextos()
+      .then(volcarTextos)
+      .then(cargarDatos)
+      .then(() => {
+        // Recalcular el tamaño de los mapas una vez cargados todos los recursos
+        setTimeout(() => mapas.forEach((m) => m && m.invalidateSize()), 250);
+      })
+      .catch((err) => console.error(err));
 
     // Modal de la imagen de portada: ampliar y descargar
     const imgPortada = $('#img-portada');

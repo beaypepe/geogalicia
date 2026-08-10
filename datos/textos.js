@@ -26,9 +26,9 @@ Su único propósito es que todos podamos crear nuestros Adventure Labs fácilme
 
 Aquí encontraréis el mapa con los 61 puntos del geoart, las coordenadas en formato geocaching y, paso a paso, todo lo que hay que rellenar en la app de Adventure Lab.
 
-📊 Además, tenemos una hoja de cálculo de Google en la que se están asignando los labs a cada equipo: allí también se podrán ir poniendo las temáticas, las preguntas, las respuestas, etc. Podéis acceder desde este enlace: https://docs.google.com/spreadsheets/d/1UKiFDh26PM1axQFUR7TOIsJeGAA0PPr8CaXlUGUBFZk/edit?usp=sharing`,
+📊 Además, tenemos una hoja de cálculo de Google en la que se están asignando los labs a cada equipo y donde se irán poniendo las temáticas, las preguntas, las respuestas, etc. El enlace a la hoja ya está en el grupo de WhatsApp: preferimos no publicarlo aquí para que las respuestas no las vea cualquiera.`,
 
-  whatsapp: `📱 El grupo de WhatsApp se mantiene para comunicarnos entre todos: cualquier duda, propuesta o decisión se habla allí, y lo que se acuerde se irá reflejando en esta página.`,
+  whatsapp: `El grupo de WhatsApp se mantiene para comunicarnos entre todos: cualquier duda, propuesta o decisión se habla allí, y lo que se acuerde se irá reflejando en esta página.`,
 
   /* ---------- Mapa y listado de coordenadas ---------- */
   mapaTitulo: "El geoart: 61 puntos que dibujan «GALICIA»",

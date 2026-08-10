@@ -5,12 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GeoGalicia: Roteiro Lab Atlántico</title>
   <meta name="description" content="Instrucciones para los 29 equipos participantes en el geoart GeoGalicia: Roteiro Lab Atlántico (61 Adventure Labs).">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Anti-caché: si version.txt cambia, recarga la página sin usar la caché
+       (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
+  <script>
+    (function () {
+      var VER = '20260810-1';
+      try {
+        fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
+          .then(function (r) { return r.text(); })
+          .then(function (v) {
+            var actual = (v || '').trim();
+            if (actual && actual !== VER) {
+              var url = location.href.split('?')[0];
+              location.replace(url + '?v=' + encodeURIComponent(actual));
+            }
+          })
+          .catch(function () { /* sin conexión: no pasa nada */ });
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-1">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-1">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css?v=20260810-1">
 </head>
 <body>
 
@@ -41,12 +62,12 @@
         <p>Esta página es una forma sencilla de compartir las instrucciones del proyecto <strong>GeoGalicia: Roteiro Lab Atlántico</strong> entre los 29 equipos participantes.</p>
         <p>Su único propósito es que todos podamos crear nuestros Adventure Labs fácilmente, con los mismos datos y el mismo estilo.</p>
         <p>Aquí encontraréis el mapa con los 61 puntos del geoart, las coordenadas en formato geocaching y, paso a paso, todo lo que hay que rellenar en la app de Adventure Lab.</p>
-        <p>📊 Además, tenemos una <strong>hoja de cálculo de Google</strong> en la que se están asignando los labs a cada equipo: allí también se podrán ir poniendo las temáticas, las preguntas, las respuestas, etc. Podéis acceder desde este enlace: <a href="https://docs.google.com/spreadsheets/d/1UKiFDh26PM1axQFUR7TOIsJeGAA0PPr8CaXlUGUBFZk/edit?usp=sharing" target="_blank" rel="noopener noreferrer">https://docs.google.com/spreadsheets/d/1UKiFDh26PM1axQFUR7TOIsJeGAA0PPr8CaXlUGUBFZk/edit?usp=sharing</a></p>
+        <p>📊 Además, tenemos una <strong>hoja de cálculo de Google</strong> en la que se están asignando los labs a cada equipo y donde se irán poniendo las temáticas, las preguntas, las respuestas, etc. El enlace a la hoja ya está en el grupo de WhatsApp: preferimos no publicarlo aquí para que las respuestas no las vea cualquiera.</p>
       </div>
       <div class="aviso-whatsapp">
-        <span class="emoji" aria-hidden="true">📱</span>
+        <span class="aviso-whatsapp-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
         <div class="cuerpo-texto" id="texto-whatsapp">
-          <p>📱 El grupo de WhatsApp se mantiene para comunicarnos entre todos: cualquier duda, propuesta o decisión se habla allí, y lo que se acuerde se irá reflejando en esta página.</p>
+          <p>El grupo de WhatsApp se mantiene para comunicarnos entre todos: cualquier duda, propuesta o decisión se habla allí, y lo que se acuerde se irá reflejando en esta página.</p>
         </div>
       </div>
     </section>
@@ -151,7 +172,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260810-1" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -159,9 +180,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260810-1" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260810-1" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -262,6 +283,20 @@
              aria-label="Mapa con la propuesta de coordenadas de las 5 etapas en la Plaza del Obradoiro">
           <p class="error-mapa">El mapa se carga aquí. Si ves este mensaje, abre la página publicada en GitHub Pages (o con conexión a internet).</p>
         </div>
+        <div class="selector-radio">
+          <label for="select-radio">Radio de los círculos del mapa:</label>
+          <select id="select-radio" class="select-radio">
+            <option value="50">50 m</option>
+            <option value="100">100 m</option>
+            <option value="200">200 m</option>
+            <option value="300">300 m</option>
+            <option value="400">400 m</option>
+            <option value="500">500 m</option>
+            <option value="custom">Tamaño personalizado…</option>
+          </select>
+          <input type="number" id="radio-custom" class="radio-custom" min="20" max="500" step="10"
+                 placeholder="20 – 500 m" hidden aria-label="Tamaño personalizado del radio en metros">
+        </div>
         <div class="lista-coordenadas lista-etapas">
           <div class="cabecera-lista">
             <div>
@@ -323,7 +358,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="datos/textos.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=20260810-1"></script>
 </body>
 </html>
