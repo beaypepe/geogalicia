@@ -606,9 +606,6 @@ body {
 .pie .pie-linea1 {
   font-size: 1.08rem;
   line-height: 1.45;
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .pie .pie-linea2 {
@@ -616,9 +613,6 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   color: #cfe0f0;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ---------- Responsive ---------- */
