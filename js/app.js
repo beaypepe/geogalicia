@@ -178,20 +178,6 @@
       valorNombre.textContent = T.labNombreValor;
       valorNombre.dataset.textoRaw = String(T.labNombreValor);
     }
-
-    const contChips = $('#temas-chips');
-    if (contChips && Array.isArray(T.temas)) {
-      contChips.innerHTML = '';
-      T.temas.forEach((tema) => {
-        const chip = document.createElement('button');
-        chip.type = 'button';
-        chip.className = 'chip';
-        chip.textContent = tema;
-        chip.title = 'Marca aquí los vuestros para decidir; la selección final se hace en la app de Adventure Lab.';
-        chip.addEventListener('click', () => chip.classList.toggle('activo'));
-        contChips.appendChild(chip);
-      });
-    }
   }
 
   /* ---------- Listados de coordenadas ---------- */
@@ -232,6 +218,28 @@
         .map((p) => 'Punto ' + p.num + ': ' + p.cruda)
         .join('\n');
     }
+  }
+
+  /* Selector de número de lab → coordenadas de inicio */
+  function construirSelectorInicio(puntos) {
+    const sel = $('#select-punto');
+    if (!sel || !puntos.length) return;
+    puntos.forEach((p) => {
+      const op = document.createElement('option');
+      op.value = p.num;
+      op.textContent = 'Punto ' + p.num;
+      sel.appendChild(op);
+    });
+    const resultado = $('#inicio-resultado');
+    const coords = $('#inicio-coords');
+    const btn = $('#btn-copiar-inicio');
+    sel.addEventListener('change', () => {
+      const p = puntos.find((x) => x.num === sel.value);
+      if (!p) { resultado.hidden = true; return; }
+      coords.textContent = p.cruda;
+      btn.dataset.copiarTexto = p.cruda;
+      resultado.hidden = false;
+    });
   }
 
   /* ---------- Mapas (Leaflet) ---------- */
@@ -308,10 +316,8 @@
     const mapa = L.map(div, { layers: [base.osm], scrollWheelZoom: false });
     L.control.layers(base.control, null, { position: 'topright' }).addTo(mapa);
 
-    const bounds = [];
     etapas.forEach((e) => {
       const ll = [e.lat, e.lng];
-      bounds.push(ll);
       const icono = L.divIcon({
         className: 'icono-punto',
         html: '<span class="punto-num punto-etapa">' + e.num + '</span>',
@@ -334,7 +340,12 @@
       }).addTo(mapa);
     });
 
-    if (bounds.length) mapa.fitBounds(L.latLngBounds(bounds).pad(0.4));
+    // Zoom 17 para que la X de la Plaza del Obradoiro se vea bien
+    const centro = [
+      etapas.reduce((s, e) => s + e.lat, 0) / etapas.length,
+      etapas.reduce((s, e) => s + e.lng, 0) / etapas.length
+    ];
+    mapa.setView(centro, 17);
     mapas.push(mapa);
     return mapa;
   }
@@ -380,6 +391,7 @@
       const etapas = leerEtapas(etapasTexto);
 
       construirListaPuntos(puntos);
+      construirSelectorInicio(puntos);
       construirMapaGeoart(puntos);
       construirEtapas(etapas);
     } catch (err) {
@@ -398,6 +410,22 @@
       // Recalcular el tamaño de los mapas una vez cargados todos los recursos
       setTimeout(() => mapas.forEach((m) => m && m.invalidateSize()), 250);
     });
+
+    // Modal de la imagen de portada: ampliar y descargar
+    const imgPortada = $('#img-portada');
+    const modal = $('#modal-portada');
+    if (imgPortada && modal) {
+      const cerrar = () => { modal.hidden = true; };
+      imgPortada.addEventListener('click', () => { modal.hidden = false; });
+      const btnCerrar = $('#btn-cerrar-modal');
+      if (btnCerrar) btnCerrar.addEventListener('click', cerrar);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) cerrar();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') cerrar();
+      });
+    }
   }
 
   document.addEventListener('DOMContentLoaded', iniciar);

@@ -346,13 +346,6 @@ body {
 
 .marco-descripcion .btn-copiar { margin-top: 10px; }
 
-.nota-archivo {
-  font-size: 0.8rem;
-  color: #6b7a8c;
-  margin: 6px 0 0;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-}
-
 /* Imagen de portada */
 .figura-logo {
   margin: 14px 0 0;
@@ -367,7 +360,11 @@ body {
   border: 1px solid #e3e8ef;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   background: #eef3f8;
+  cursor: zoom-in;
+  transition: transform 0.15s;
 }
+
+.figura-logo img:hover { transform: scale(1.03); }
 
 .figura-logo figcaption {
   font-size: 0.8rem;
@@ -375,32 +372,97 @@ body {
   margin-top: 8px;
 }
 
-/* Chips de temas */
-.chips {
+/* Modal para ampliar la imagen de portada */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(8, 24, 44, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay[hidden] { display: none; }
+
+.modal-contenido {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  max-width: min(92vw, 580px);
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+}
+
+.modal-botones {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.btn-copiar { text-decoration: none; }
+
+/* Selector de número de lab (ubicación de inicio) */
+.selector-inicio {
+  margin-top: 14px;
+  background: #f4f7fb;
+  border: 1px dashed #c6d6e8;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.selector-inicio label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #143c5c;
+}
+
+.select-punto {
+  font-size: 0.95rem;
+  font-family: inherit;
+  padding: 8px 12px;
+  border: 1px solid #b9cbe0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2937;
+  width: 100%;
+  max-width: 340px;
+}
+
+.inicio-resultado {
   margin-top: 12px;
   display: flex;
+  align-items: center;
+  gap: 12px;
   flex-wrap: wrap;
-  gap: 8px;
 }
 
-.chip {
+.inicio-resultado[hidden] { display: none; }
+
+.inicio-coords {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0b5f9e;
   background: #ffffff;
-  border: 1px solid #c6d6e8;
-  color: #2b4257;
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.chip:hover:not(.activo) { background: #eef5fb; }
-
-.chip.activo {
-  background: #0f6db1;
-  color: #ffffff;
-  border-color: #0f6db1;
+  border: 1px solid #dbe7f2;
+  border-radius: 8px;
+  padding: 8px 12px;
 }
 
 /* Mapa de las etapas */
@@ -488,14 +550,17 @@ body {
 
 /* ---------- Pie ---------- */
 .pie {
-  max-width: 1180px;
-  margin: 34px auto 0;
-  padding: 22px 20px 34px;
-  border-top: 1px solid #e5e9f0;
+  margin: 40px 0 0;
+  padding: 26px 24px 30px;
+  background: #0b2e4f;
+  border-top: 3px solid #0f6db1;
   text-align: center;
-  color: #6b7a8c;
-  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.92rem;
 }
+
+.pie p { margin: 0; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 920px) {

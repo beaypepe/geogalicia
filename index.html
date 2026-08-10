@@ -38,11 +38,9 @@
     <section class="tarjeta" id="introduccion" aria-labelledby="introduccion-titulo">
       <h2 id="introduccion-titulo" data-texto="introTitulo"></h2>
       <div class="cuerpo-texto" id="texto-intro"></div>
-      <button type="button" class="btn-copiar" data-copiar="texto-intro">📋 Copiar texto de introducción</button>
       <div class="aviso-whatsapp">
         <span class="emoji" aria-hidden="true">📱</span>
         <div class="cuerpo-texto" id="texto-whatsapp"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-whatsapp">📋 Copiar</button>
       </div>
     </section>
 
@@ -72,14 +70,12 @@
     <section class="aviso aviso-plazo" id="aviso-plazo" aria-labelledby="plazo-titulo">
       <h2 id="plazo-titulo" data-texto="plazoTitulo"></h2>
       <div class="cuerpo-texto" id="texto-plazo"></div>
-      <button type="button" class="btn-copiar" data-copiar="texto-plazo">📋 Copiar</button>
     </section>
 
     <!-- Votación del idioma -->
     <section class="aviso aviso-votacion" id="votacion" aria-labelledby="votacion-titulo">
       <h2 id="votacion-titulo" data-texto="votacionTitulo"></h2>
       <div class="cuerpo-texto" id="texto-votacion"></div>
-      <button type="button" class="btn-copiar" data-copiar="texto-votacion">📋 Copiar</button>
     </section>
 
     <!-- 3. Instrucciones para el Adventure Lab -->
@@ -105,7 +101,6 @@
         </div>
         <div class="cuerpo-texto" id="texto-lab-descripcion"></div>
         <div class="marco-descripcion">
-          <p class="nota-archivo">📄 datos/descripcion.txt</p>
           <div class="cuerpo-texto" id="descripcion-texto"></div>
           <button type="button" class="btn-copiar" data-copiar="descripcion-texto">📋 Copiar descripción</button>
         </div>
@@ -118,9 +113,21 @@
         </div>
         <div class="cuerpo-texto" id="texto-lab-imagen"></div>
         <figure class="figura-logo">
-          <img src="images/logo.png" alt="Imagen de portada común (images/logo.png)">
-          <figcaption>images/logo.png — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
+          <img src="images/logo.png" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+               title="Haz clic para ampliar">
+          <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
+
+        <!-- Modal para ampliar y descargar la imagen de portada -->
+        <div class="modal-overlay" id="modal-portada" hidden>
+          <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
+            <img src="images/logo.png" alt="Imagen de portada ampliada">
+            <div class="modal-botones">
+              <a class="btn-copiar" href="images/logo.png" download="logo.png">⬇️ Descargar imagen</a>
+              <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
+            </div>
+          </div>
+        </div>
       </article>
 
       <article class="paso">
@@ -129,7 +136,6 @@
           <h3 data-texto="labTemaTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-lab-tema"></div>
-        <div class="chips" id="temas-chips" aria-label="Lista de temas del Adventure Lab"></div>
       </article>
 
       <article class="paso">
@@ -138,6 +144,16 @@
           <h3 data-texto="labInicioTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-lab-inicio"></div>
+        <div class="selector-inicio">
+          <label for="select-punto">Vuestro número de lab:</label>
+          <select id="select-punto" class="select-punto">
+            <option value="" selected disabled>Elegid vuestro número (01–61)…</option>
+          </select>
+          <div class="inicio-resultado" id="inicio-resultado" hidden>
+            <span class="inicio-coords" id="inicio-coords"></span>
+            <button type="button" class="btn-copiar" id="btn-copiar-inicio">📋 Copiar coordenadas</button>
+          </div>
+        </div>
       </article>
     </section>
 
@@ -151,7 +167,6 @@
           <h3 data-texto="etapaSecuencialTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-secuencial"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-secuencial">📋 Copiar</button>
       </article>
 
       <article class="paso">
@@ -160,7 +175,6 @@
           <h3 data-texto="etapaNombreTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-nombre"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-nombre">📋 Copiar</button>
       </article>
 
       <article class="paso">
@@ -169,7 +183,6 @@
           <h3 data-texto="etapaDescripcionTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-descripcion"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-descripcion">📋 Copiar</button>
       </article>
 
       <article class="paso">
@@ -178,7 +191,6 @@
           <h3 data-texto="etapaImagenTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-imagen"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-imagen">📋 Copiar</button>
       </article>
 
       <article class="paso">
@@ -192,7 +204,7 @@
         <div class="lista-coordenadas lista-etapas">
           <div class="cabecera-lista">
             <div>
-              <h4>Coordenadas de las 5 etapas (datos/etapas.txt)</h4>
+              <h4>Coordenadas de las 5 etapas</h4>
             </div>
             <button type="button" class="btn-copiar" id="btn-copiar-etapas">📋 Copiar todas</button>
           </div>
@@ -207,7 +219,6 @@
           <h3 data-texto="etapaDistanciaTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-distancia"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-distancia">📋 Copiar</button>
       </article>
 
       <article class="paso">
@@ -216,7 +227,6 @@
           <h3 data-texto="etapaPreguntaTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-pregunta"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-pregunta">📋 Copiar</button>
       </article>
 
       <article class="paso">
@@ -225,7 +235,6 @@
           <h3 data-texto="etapaCompletadoTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-completado"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-completado">📋 Copiar</button>
       </article>
 
       <article class="paso">
@@ -234,7 +243,6 @@
           <h3 data-texto="etapaGuardarTitulo"></h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-guardar"></div>
-        <button type="button" class="btn-copiar" data-copiar="texto-etapa-guardar">📋 Copiar</button>
       </article>
     </section>
 
