@@ -122,5 +122,6 @@ Luego viene la distancia, que en principio será de 100 metros, y así se podrá
   etapaGuardarTexto: `Con todos los datos rellenos, solo hay que darle al botón «Crear la ubicación» (o «Actualizar la ubicación» si ya estaba creada anteriormente) y ya quedará guardado.`,
 
   /* ---------- Pie de página ---------- */
-  pieTexto: "GeoGalicia: Roteiro Lab Atlántico — proyecto colaborativo de 29 equipos · 61 Adventure Labs dibujando «GALICIA» sobre el Atlántico. Las decisiones se toman en el grupo de WhatsApp; esta página se actualiza con lo que se acuerde."
+  pieTexto1: "GeoGalicia: Roteiro Lab Atlántico — proyecto colaborativo de 29 equipos · 61 Adventure Labs dibujando «GALICIA» sobre el Atlántico.",
+  pieTexto2: "Las decisiones se toman en el grupo de WhatsApp; esta página se actualiza con lo que se acuerde."
 };
