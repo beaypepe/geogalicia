@@ -6,11 +6,25 @@
   <title>GeoGalicia: Roteiro Lab Atlántico</title>
   <meta name="description" content="Instrucciones para los 29 equipos participantes en el geoart GeoGalicia: Roteiro Lab Atlántico (61 Adventure Labs).">
 
+  <!-- Metadatos para compartir (WhatsApp, redes, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GeoGalicia: Roteiro Lab Atlántico">
+  <meta property="og:title" content="GeoGalicia: Roteiro Lab Atlántico">
+  <meta property="og:description" content="Instrucciones para crear los 61 Adventure Labs del geoart. Proyecto colaborativo de 29 equipos de geocaching.">
+  <meta property="og:url" content="https://beaypepe.github.io/geogalicia/">
+  <meta property="og:image" content="https://beaypepe.github.io/geogalicia/images/logo.png">
+  <meta property="og:image:alt" content="Logo de GeoGalicia: Roteiro Lab Atlántico">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GeoGalicia: Roteiro Lab Atlántico">
+  <meta name="twitter:description" content="Instrucciones para crear los 61 Adventure Labs del geoart. Proyecto colaborativo de 29 equipos de geocaching.">
+  <meta name="twitter:image" content="https://beaypepe.github.io/geogalicia/images/logo.png">
+
   <!-- Anti-caché: si version.txt cambia, recarga la página sin usar la caché
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260810-2';
+      var VER = '20260810-3';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -26,12 +40,12 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-2">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-2">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-2">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-2">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-3">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-3">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-3">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-3">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260810-2">
+  <link rel="stylesheet" href="css/estilos.css?v=20260810-3">
 </head>
 <body>
 
@@ -172,7 +186,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260810-2" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260810-3" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -180,9 +194,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260810-2" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260810-3" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260810-2" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260810-3" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -358,6 +372,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260810-2"></script>
+  <script src="js/app.js?v=20260810-3"></script>
 </body>
 </html>
