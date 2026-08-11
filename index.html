@@ -24,7 +24,7 @@
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260810-4';
+      var VER = '20260810-5';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -40,12 +40,12 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-4">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-4">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-4">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-4">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-5">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-5">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-5">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-5">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260810-4">
+  <link rel="stylesheet" href="css/estilos.css?v=20260810-5">
 </head>
 <body>
 
@@ -122,11 +122,11 @@
 
     <!-- Votación del idioma -->
     <section class="aviso aviso-votacion" id="votacion" aria-labelledby="votacion-titulo">
-      <h2 id="votacion-titulo" data-texto="votacionTitulo">🗳️ Primera votación: ¿en qué idioma hacemos los labs?</h2>
+      <h2 id="votacion-titulo" data-texto="votacionTitulo">🗳️ Idioma de los labs: se decidió el gallego</h2>
       <div class="cuerpo-texto" id="texto-votacion">
-        <p>Antes de empezar a crear los labs hay que decidir si los haremos en <strong>castellano</strong> o en <strong>gallego</strong>. Esta decisión se tomará por el grupo de WhatsApp: esta página solo lo deja dicho para que todo el mundo lo tenga claro.</p>
-        <p>Para que conste, los labs de Catalunya (por lo menos las etapas que hemos visto, que no son todas) están en catalán, así que estaría bien votarlo para dar uniformidad a todo el geoart. También existe la opción de hacerlos <strong>bilingües, en gallego y castellano</strong>.</p>
-        <p>Cuando se haya decidido, lo pondremos en esta página.</p>
+        <p>En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en <strong>gallego</strong>. Esa es la opción por defecto para todos.</p>
+        <p>Dicho esto, si alguien prefiere hacer su lab en <strong>castellano</strong>, en otro idioma o <strong>bilingüe</strong>, allá él o ella: cada equipo es libre de elegir, pero la decisión mayoritaria es el gallego.</p>
+        <p>La descripción común ya está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.</p>
       </div>
     </section>
 
@@ -155,21 +155,23 @@
           <h3 data-texto="labDescripcionTitulo">Descripción del Adventure Lab</h3>
         </div>
         <div class="cuerpo-texto" id="texto-lab-descripcion">
-          <p>La descripción es <strong>común para todos los labs</strong> y ya está acordada (esta es la versión en castellano que se propuso hace tiempo). Si en la votación del idioma sale el gallego, habrá que traducirla; y si alguien quiere proponer otra cosa, que lo diga por el grupo de WhatsApp.</p>
+          <p>La descripción es <strong>común para todos los labs</strong> y ya está acordada: está en <strong>gallego</strong>, el idioma elegido por mayoría en el grupo de WhatsApp.</p>
+          <p>Si alguien hace su lab en otro idioma, tendrá que traducirla, pero esta es la versión de referencia. Y si alguien quiere proponer algún cambio, que lo diga por el grupo de WhatsApp.</p>
           <p>El texto está listo para copiar y pegar tal cual en vuestro lab:</p>
         </div>
         <div class="marco-descripcion">
           <div class="cuerpo-texto" id="descripcion-texto">
-            <p>A través de este geoart con 61 Adventure Labs formando la palabra GALICIA sobre el Atlántico, te proponemos descubrir nuestra tierra desde una perspectiva diferente.</p>
-            <p>🌿 Naturaleza, cultura, historia y sabor se entrelazan en cada uno de los retos. Te invitamos a responder preguntas que te llevarán por:</p>
-            <p>Rías, montes e illas</p>
-            <p>Platos típicos, mariscos y postres</p>
-            <p>Fiestas populares, leyendas y músicas tradicionales</p>
-            <p>Monumentos, castillos y rutas del Camino</p>
-            <p>Palabras y expresiones en gallego</p>
-            <p>Oficios, productos con D.O. y arquitectura típica</p>
-            <p>Cada Adventure Lab consta de 5 preguntas que te sumergen en la riqueza geográfica y cultural de Galicia.</p>
-            <p>🌍 Un proyecto colaborativo de casi 30 equipos gallegos con amor por su tierra y ganas de compartirla contigo.</p>
+            <p>¡Benvid@ a unha viaxe única polo corazón de Galicia!</p>
+            <p>A través deste geoart con 61 Adventure Labs formando a palabra GALICIA sobre o Atlántico, propómosche descubrir a nosa terra desde unha perspectiva diferente.</p>
+            <p>🌿 Natureza, cultura, historia e sabor entrelázanse en cada un dos retos. Convidámoste a responder preguntas que te levarán por:</p>
+            <p>- Rías, montes e illas</p>
+            <p>- Pratos típicos, mariscos e sobremesas</p>
+            <p>- Festas populares, lendas e músicas tradicionais</p>
+            <p>- Monumentos, castelos e rutas do Camiño</p>
+            <p>- Palabras e expresións en galego</p>
+            <p>- Oficios, produtos con D.O. e arquitectura típica</p>
+            <p>Cada Adventure Lab consta de 5 preguntas que te mergullan na riqueza xeográfica e cultural de Galicia.</p>
+            <p>🌍 Un proxecto colaborativo de case 30 equipos galegos con amor pola súa terra e ganas de compartila contigo.</p>
           </div>
           <button type="button" class="btn-copiar" data-copiar="descripcion-texto">📋 Copiar descripción</button>
         </div>
@@ -186,7 +188,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260810-4" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260810-5" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -194,9 +196,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260810-4" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260810-5" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260810-4" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260810-5" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -285,16 +287,16 @@
       <article class="paso">
         <div class="paso-cabecera">
           <span class="paso-num" aria-hidden="true">4</span>
-          <h3 data-texto="etapaCoordenadasTitulo">Coordenadas de la etapa — propuesta de BeayPepe</h3>
+          <h3 data-texto="etapaCoordenadasTitulo">Coordenadas de la etapa — Parque Central de Galicia</h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-coordenadas">
-          <p>⚠️ Esta es una <strong>PROPUESTA personal de BeayPepe</strong>: todavía no se ha comentado en el grupo, así que habrá que ponerse de acuerdo en esto.</p>
-          <p>La idea es que las etapas de <strong>TODOS los labs</strong> estén en la <strong>Plaza del Obradoiro</strong>, con las mismas cinco coordenadas, formando una <strong>X en el centro de la plaza</strong>.</p>
-          <p>Además, si le ponemos un <strong>radio de 100 metros</strong> a cada etapa, se podrá hacer desde cualquier punto de la plaza, incluso bajo los soportales del Concello, por si acaso alguien quiere hacer el geoart un día de lluvia (cosa bastante habitual en Santiago).</p>
-          <p>Luego viene la distancia, que en principio será de 100 metros, y así se podrá hacer desde cualquier punto de la plaza. Si la gente prefiere otra distancia para que se pueda hacer desde alguna cafetería cercana, es cuestión de proponerlo en el grupo de WhatsApp.</p>
+          <p>La ubicación de las etapas es el <strong>Parque Central de Galicia</strong>, en el <strong>Centro Geodésico de Galicia</strong>: así lo eligió la mayoría en el grupo de WhatsApp.</p>
+          <p>Las cinco etapas de <strong>TODOS los labs</strong> estarán en este parque, con las mismas coordenadas, a pocos metros unas de otras.</p>
+          <p>Con un <strong>radio de 100 metros</strong> en cada etapa se podrá resolver desde cualquier punto del parque, incluido el <strong>tejadillo</strong> que hay para hacerlo a cubierto.</p>
+          <p>En el mapa de abajo podéis ver las cinco coordenadas, con un <strong>zoom de 17</strong> para que se vea bien. Si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.</p>
         </div>
         <div id="mapa-etapas" class="mapa-pequeno" role="application"
-             aria-label="Mapa con la propuesta de coordenadas de las 5 etapas en la Plaza del Obradoiro">
+             aria-label="Mapa con las coordenadas de las 5 etapas en el Parque Central de Galicia (Centro Geodésico de Galicia)">
           <p class="error-mapa">El mapa se carga aquí. Si ves este mensaje, abre la página publicada en GitHub Pages (o con conexión a internet).</p>
         </div>
         <div class="selector-radio">
@@ -329,7 +331,7 @@
           <h3 data-texto="etapaDistanciaTitulo">Distancia</h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-distancia">
-          <p>La distancia será de <strong>100 metros</strong>, o más si se decide en el grupo de WhatsApp. Con 100 metros se podrá hacer desde cualquier punto de la plaza; si se prefiere una distancia mayor (por ejemplo, para completarlo desde alguna cafetería cercana), es cuestión de proponerlo en el grupo.</p>
+          <p>La distancia de cada etapa será de <strong>100 metros</strong>: con eso llega para que se pueda resolver desde cualquier punto del parque, incluido el <strong>tejadillo</strong> que hay para hacerlo a cubierto.</p>
         </div>
       </article>
 
@@ -372,6 +374,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260810-4"></script>
+  <script src="js/app.js?v=20260810-5"></script>
 </body>
 </html>

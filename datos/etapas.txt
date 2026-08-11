@@ -2,17 +2,16 @@
 # GEOGALICIA: ROTEIRO LAB ATLÁNTICO
 # Coordenadas de las 5 etapas de cada Adventure Lab
 #
-# PROPUESTA DE BEAYPEPE (todavía sin votar en el grupo):
-# las 5 etapas de TODOS los labs estarán en la Plaza del
-# Obradoiro, con las mismas coordenadas, formando una X en
-# el centro de la plaza. Con un radio de 100 m se puede
-# completar desde cualquier punto de la plaza, incluso bajo
-# los soportales del Concello (muy útil un día de lluvia).
+# UBICACIÓN ELEGIDA POR MAYORÍA EN EL GRUPO:
+# Parque Central de Galicia, en el Centro Geodésico de Galicia.
+# Las 5 etapas de TODOS los labs tendrán estas mismas coordenadas.
+# Con un radio de 100 m se puede resolver desde cualquier punto
+# del parque, incluido el tejadillo que hay para hacerlo a cubierto.
 #
 # Formato:  nº de etapa | coordenadas | radio en metros
 # ============================================================
-1 | N 42° 52.827' W 8° 32.743' | 100
-2 | N 42° 52.829' W 8° 32.731' | 100
-3 | N 42° 52.838' W 8° 32.747' | 100
-4 | N 42° 52.825' W 8° 32.757' | 100
-5 | N 42° 52.815' W 8° 32.741' | 100
+1 | N 42° 45.423' W 7° 54.649' | 100
+2 | N 42° 45.427' W 7° 54.649' | 100
+3 | N 42° 45.423' W 7° 54.654' | 100
+4 | N 42° 45.419' W 7° 54.650' | 100
+5 | N 42° 45.423' W 7° 54.645' | 100

@@ -349,7 +349,7 @@
       circulosEtapas.push(circulo);
     });
 
-    // Zoom 17 para que la X de la Plaza del Obradoiro se vea bien
+    // Zoom 17 para que las 5 coordenadas del parque se vean bien
     const centro = [
       etapas.reduce((s, e) => s + e.lat, 0) / etapas.length,
       etapas.reduce((s, e) => s + e.lng, 0) / etapas.length

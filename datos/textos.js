@@ -44,13 +44,13 @@ Además, se podría aprovechar para crear un evento en Santiago para presentar e
 
 ¡Dad vuestra opinión en el grupo!`,
 
-  /* ---------- Votación del idioma ---------- */
-  votacionTitulo: "🗳️ Primera votación: ¿en qué idioma hacemos los labs?",
-  votacion: `Antes de empezar a crear los labs hay que decidir si los haremos en castellano o en gallego. Esta decisión se tomará por el grupo de WhatsApp: esta página solo lo deja dicho para que todo el mundo lo tenga claro.
+  /* ---------- Votación del idioma (ya decidido) ---------- */
+  votacionTitulo: "🗳️ Idioma de los labs: se decidió el gallego",
+  votacion: `En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en gallego. Esa es la opción por defecto para todos.
 
-Para que conste, los labs de Catalunya (por lo menos las etapas que hemos visto, que no son todas) están en catalán, así que estaría bien votarlo para dar uniformidad a todo el geoart. También existe la opción de hacerlos bilingües, en gallego y castellano.
+Dicho esto, si alguien prefiere hacer su lab en castellano, en otro idioma o bilingüe, allá él o ella: cada equipo es libre de elegir, pero la decisión mayoritaria es el gallego.
 
-Cuando se haya decidido, lo pondremos en esta página.`,
+La descripción común ya está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.`,
 
   /* ---------- Instrucciones: Adventure Lab ---------- */
   instruccionesLabTitulo: "Instrucciones para el Adventure Lab",
@@ -61,7 +61,9 @@ Cuando se haya decidido, lo pondremos en esta página.`,
 XX son los dos dígitos del número de vuestro lab (del 01 al 61): cada uno ya sabe qué números ha de utilizar. Por ejemplo, si vuestro lab es el número 7, el nombre será «GeoGalicia #07».`,
 
   labDescripcionTitulo: "Descripción del Adventure Lab",
-  labDescripcionTexto: `La descripción es común para todos los labs y ya está acordada (esta es la versión en castellano que se propuso hace tiempo). Si en la votación del idioma sale el gallego, habrá que traducirla; y si alguien quiere proponer otra cosa, que lo diga por el grupo de WhatsApp.
+  labDescripcionTexto: `La descripción es común para todos los labs y ya está acordada: está en gallego, el idioma elegido por mayoría en el grupo de WhatsApp.
+
+Si alguien hace su lab en otro idioma, tendrá que traducirla, pero esta es la versión de referencia. Y si alguien quiere proponer algún cambio, que lo diga por el grupo de WhatsApp.
 
 El texto está listo para copiar y pegar tal cual en vuestro lab:`,
 
@@ -100,17 +102,17 @@ Consejo: la mayoría de la gente se saltará esta descripción, sobre todo si la
   etapaImagenTitulo: "Imagen de la etapa",
   etapaImagenTexto: `También habrá que poner una imagen en cada etapa. Cada uno es libre de colocar la imagen que quiera, siempre que esté relacionada con su etapa.`,
 
-  etapaCoordenadasTitulo: "Coordenadas de la etapa — propuesta de BeayPepe",
-  etapaCoordenadasTexto: `⚠️ Esta es una PROPUESTA personal de BeayPepe: todavía no se ha comentado en el grupo, así que habrá que ponerse de acuerdo en esto.
+  etapaCoordenadasTitulo: "Coordenadas de la etapa — Parque Central de Galicia",
+  etapaCoordenadasTexto: `La ubicación de las etapas es el Parque Central de Galicia, en el Centro Geodésico de Galicia: así lo eligió la mayoría en el grupo de WhatsApp.
 
-La idea es que las etapas de TODOS los labs estén en la Plaza del Obradoiro, con las mismas cinco coordenadas, formando una X en el centro de la plaza.
+Las cinco etapas de TODOS los labs estarán en este parque, con las mismas coordenadas, a pocos metros unas de otras.
 
-Además, si le ponemos un radio de 100 metros a cada etapa, se podrá hacer desde cualquier punto de la plaza, incluso bajo los soportales del Concello, por si acaso alguien quiere hacer el geoart un día de lluvia (cosa bastante habitual en Santiago).
+Con un radio de 100 metros en cada etapa se podrá resolver desde cualquier punto del parque, incluido el tejadillo que hay para hacerlo a cubierto.
 
-Luego viene la distancia, que en principio será de 100 metros, y así se podrá hacer desde cualquier punto de la plaza. Si la gente prefiere otra distancia para que se pueda hacer desde alguna cafetería cercana, es cuestión de proponerlo en el grupo de WhatsApp.`,
+En el mapa de abajo podéis ver las cinco coordenadas, con un zoom de 17 para que se vea bien. Si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.`,
 
   etapaDistanciaTitulo: "Distancia",
-  etapaDistanciaTexto: `La distancia será de 100 metros, o más si se decide en el grupo de WhatsApp. Con 100 metros se podrá hacer desde cualquier punto de la plaza; si se prefiere una distancia mayor (por ejemplo, para completarlo desde alguna cafetería cercana), es cuestión de proponerlo en el grupo.`,
+  etapaDistanciaTexto: `La distancia de cada etapa será de 100 metros: con eso llega para que se pueda resolver desde cualquier punto del parque, incluido el tejadillo que hay para hacerlo a cubierto.`,
 
   etapaPreguntaTitulo: "Tipo de pregunta",
   etapaPreguntaTexto: `Pondremos todas las etapas con «Opción múltiple»: habrá que poner hasta cuatro respuestas, de las cuales solo una será correcta. Si se quieren poner solo dos o tres respuestas, también se puede.`,
