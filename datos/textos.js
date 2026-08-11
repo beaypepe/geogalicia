@@ -40,7 +40,7 @@ Aquí encontraréis el mapa con los 61 puntos del geoart, las coordenadas en for
   plazoTitulo: "🗓️ Pongámonos de acuerdo en un plazo",
   plazo: `Ya estamos todos listos para crear nuestros Adventure Labs. Sería buena idea que cada uno indicara en el grupo de WhatsApp cuándo podría tener listos sus labs: así nos haremos una idea de los plazos y podremos ponernos de acuerdo en una fecha para activarlos todos, más o menos, a la vez.
 
-Además, se podría aprovechar para crear un evento en Santiago para presentar el proyecto. Estaría bien que la gente propusiera fechas para que podamos asistir cuantos más mejor, teniendo en cuenta que para crear el evento se necesitan 15 días de antelación para enviarlo a revisión.
+Además, se podría aprovechar para crear un evento en el Parque Central de Galicia para presentar el proyecto. Estaría bien que la gente propusiera fechas para que podamos asistir cuantos más mejor, teniendo en cuenta que para crear el evento se necesitan 15 días de antelación para enviarlo a revisión.
 
 ¡Dad vuestra opinión en el grupo!`,
 
