@@ -5,13 +5,16 @@
 # UBICACIÓN ELEGIDA POR MAYORÍA EN EL GRUPO:
 # Parque Central de Galicia, en el Centro Geodésico de Galicia.
 # Las 5 etapas de TODOS los labs tendrán estas mismas coordenadas.
-# Con un radio de 100 m se puede resolver desde cualquier punto
-# del parque, incluido el tejadillo que hay para hacerlo a cubierto.
+#
+# RADIO: 200 metros. Con 100 m quedaba bastante justo para poder
+# hacerlo desde el merendero cubierto del parque; con 200 m se
+# puede resolver cada etapa desde cualquier punto del parque,
+# incluido el merendero cubierto.
 #
 # Formato:  nº de etapa | coordenadas | radio en metros
 # ============================================================
-1 | N 42° 45.423' W 7° 54.649' | 100
-2 | N 42° 45.427' W 7° 54.649' | 100
-3 | N 42° 45.423' W 7° 54.654' | 100
-4 | N 42° 45.419' W 7° 54.650' | 100
-5 | N 42° 45.423' W 7° 54.645' | 100
+1 | N 42° 45.423' W 7° 54.649' | 200
+2 | N 42° 45.427' W 7° 54.649' | 200
+3 | N 42° 45.423' W 7° 54.654' | 200
+4 | N 42° 45.419' W 7° 54.650' | 200
+5 | N 42° 45.423' W 7° 54.645' | 200

@@ -38,7 +38,7 @@ Aquí encontraréis el mapa con los 61 puntos del geoart, las coordenadas en for
 
   /* ---------- Aviso del plazo ---------- */
   plazoTitulo: "🗓️ Pongámonos de acuerdo en un plazo",
-  plazo: `Ya estamos todos listos para crear nuestros Adventure Labs, así que es el momento de hablar por el grupo de WhatsApp para ver si nos ponemos de acuerdo en una fecha tope que nos permita tener rematado el lab y publicarlo.
+  plazo: `Ya estamos todos listos para crear nuestros Adventure Labs. Sería buena idea que cada uno indicara en el grupo de WhatsApp cuándo podría tener listos sus labs: así nos haremos una idea de los plazos y podremos ponernos de acuerdo en una fecha para activarlos todos, más o menos, a la vez.
 
 Además, se podría aprovechar para crear un evento en Santiago para presentar el proyecto. Estaría bien que la gente propusiera fechas para que podamos asistir cuantos más mejor, teniendo en cuenta que para crear el evento se necesitan 15 días de antelación para enviarlo a revisión.
 
@@ -107,12 +107,14 @@ Consejo: la mayoría de la gente se saltará esta descripción, sobre todo si la
 
 Las cinco etapas de TODOS los labs estarán en este parque, con las mismas coordenadas, a pocos metros unas de otras.
 
-Con un radio de 100 metros en cada etapa se podrá resolver desde cualquier punto del parque, incluido el tejadillo que hay para hacerlo a cubierto.
+Con un radio de 200 metros en cada etapa se podrá resolver desde cualquier punto del parque, incluido el merendero cubierto que hay para hacerlo a cubierto.
 
 En el mapa de abajo podéis ver las cinco coordenadas, con un zoom de 17 para que se vea bien. Si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.`,
 
   etapaDistanciaTitulo: "Distancia",
-  etapaDistanciaTexto: `La distancia de cada etapa será de 100 metros: con eso llega para que se pueda resolver desde cualquier punto del parque, incluido el tejadillo que hay para hacerlo a cubierto.`,
+  etapaDistanciaTexto: `La distancia de cada etapa será de 200 metros: con 100 metros quedaba bastante justo para poder hacerlo desde el merendero cubierto del Parque Central de Galicia, así que hemos ampliado el radio a 200 metros.
+
+Con 200 metros se podrá resolver cada etapa desde cualquier punto del parque, incluido el merendero cubierto.`,
 
   etapaPreguntaTitulo: "Tipo de pregunta",
   etapaPreguntaTexto: `Pondremos todas las etapas con «Opción múltiple»: habrá que poner hasta cuatro respuestas, de las cuales solo una será correcta. Si se quieren poner solo dos o tres respuestas, también se puede.`,

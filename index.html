@@ -24,7 +24,7 @@
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260810-5';
+      var VER = '20260810-6';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -40,12 +40,12 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-5">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-5">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-5">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-5">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-6">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-6">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-6">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-6">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260810-5">
+  <link rel="stylesheet" href="css/estilos.css?v=20260810-6">
 </head>
 <body>
 
@@ -114,7 +114,7 @@
     <section class="aviso aviso-plazo" id="aviso-plazo" aria-labelledby="plazo-titulo">
       <h2 id="plazo-titulo" data-texto="plazoTitulo">🗓️ Pongámonos de acuerdo en un plazo</h2>
       <div class="cuerpo-texto" id="texto-plazo">
-        <p>Ya estamos todos listos para crear nuestros Adventure Labs, así que es el momento de hablar por el grupo de WhatsApp para ver si nos ponemos de acuerdo en una fecha tope que nos permita tener rematado el lab y publicarlo.</p>
+        <p>Ya estamos todos listos para crear nuestros Adventure Labs. Sería buena idea que <strong>cada uno indicara en el grupo de WhatsApp cuándo podría tener listos sus labs</strong>: así nos haremos una idea de los plazos y podremos ponernos de acuerdo en una fecha para activarlos todos, más o menos, a la vez.</p>
         <p>Además, se podría aprovechar para crear un <strong>evento en Santiago</strong> para presentar el proyecto. Estaría bien que la gente propusiera fechas para que podamos asistir cuantos más mejor, teniendo en cuenta que para crear el evento se necesitan <strong>15 días de antelación</strong> para enviarlo a revisión.</p>
         <p>¡Dad vuestra opinión en el grupo!</p>
       </div>
@@ -188,7 +188,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260810-5" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260810-6" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -196,9 +196,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260810-5" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260810-6" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260810-5" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260810-6" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -292,7 +292,7 @@
         <div class="cuerpo-texto" id="texto-etapa-coordenadas">
           <p>La ubicación de las etapas es el <strong>Parque Central de Galicia</strong>, en el <strong>Centro Geodésico de Galicia</strong>: así lo eligió la mayoría en el grupo de WhatsApp.</p>
           <p>Las cinco etapas de <strong>TODOS los labs</strong> estarán en este parque, con las mismas coordenadas, a pocos metros unas de otras.</p>
-          <p>Con un <strong>radio de 100 metros</strong> en cada etapa se podrá resolver desde cualquier punto del parque, incluido el <strong>tejadillo</strong> que hay para hacerlo a cubierto.</p>
+          <p>Con un <strong>radio de 200 metros</strong> en cada etapa se podrá resolver desde cualquier punto del parque, incluido el <strong>merendero cubierto</strong> que hay para hacerlo a cubierto.</p>
           <p>En el mapa de abajo podéis ver las cinco coordenadas, con un <strong>zoom de 17</strong> para que se vea bien. Si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.</p>
         </div>
         <div id="mapa-etapas" class="mapa-pequeno" role="application"
@@ -304,7 +304,7 @@
           <select id="select-radio" class="select-radio">
             <option value="50">50 m</option>
             <option value="100">100 m</option>
-            <option value="200">200 m</option>
+            <option value="200" selected>200 m</option>
             <option value="300">300 m</option>
             <option value="400">400 m</option>
             <option value="500">500 m</option>
@@ -331,7 +331,8 @@
           <h3 data-texto="etapaDistanciaTitulo">Distancia</h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-distancia">
-          <p>La distancia de cada etapa será de <strong>100 metros</strong>: con eso llega para que se pueda resolver desde cualquier punto del parque, incluido el <strong>tejadillo</strong> que hay para hacerlo a cubierto.</p>
+          <p>La distancia de cada etapa será de <strong>200 metros</strong>: con 100 metros quedaba bastante justo para poder hacerlo desde el <strong>merendero cubierto</strong> del Parque Central de Galicia, así que hemos ampliado el radio a 200 metros.</p>
+          <p>Con 200 metros se podrá resolver cada etapa desde cualquier punto del parque, incluido el <strong>merendero cubierto</strong>.</p>
         </div>
       </article>
 
@@ -374,6 +375,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260810-5"></script>
+  <script src="js/app.js?v=20260810-6"></script>
 </body>
 </html>
