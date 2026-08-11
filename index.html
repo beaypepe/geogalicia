@@ -24,7 +24,7 @@
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260810-7';
+      var VER = '20260810-8';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -40,12 +40,12 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-7">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-7">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-7">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-7">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-8">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260810-7">
+  <link rel="stylesheet" href="css/estilos.css?v=20260810-8">
 </head>
 <body>
 
@@ -188,7 +188,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260810-7" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260810-8" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -196,9 +196,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260810-7" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260810-8" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260810-7" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260810-8" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -248,8 +248,10 @@
           <h3 data-texto="etapaSecuencialTitulo">¿Etapas secuenciales o no secuenciales?</h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-secuencial">
-          <p>Hay que decidir si las <strong>5 etapas</strong> de cada lab serán <strong>secuenciales</strong> o <strong>no secuenciales</strong>. Aquí solo lo dejamos señalado: la decisión se tomará en el grupo de WhatsApp.</p>
-          <p>Como referencia: el geoart de <strong>Portugal</strong> está formado por etapas secuenciales y el de <strong>Catalunya</strong> por etapas no secuenciales. Estaría bien ponernos de acuerdo para que todas sean iguales, secuenciales o no.</p>
+          <p>Parece que se va a decidir que <strong>cada cual decida si su lab es secuencial o no secuencial</strong> (la decisión final se tomará en el grupo de WhatsApp).</p>
+          <p>Un apunte importante: todas las etapas se harán <strong>desde un único punto</strong>, sin necesidad de moverse del sitio. Así que, en la práctica, <strong>daría igual hacer el lab secuencial o no</strong>.</p>
+          <p>La única razón para decantarse por el secuencial sería si, por algún motivo, queremos que las preguntas tengan un <strong>orden</strong>. Por ejemplo, si queremos preguntar algo sobre los <strong>años xacobeos</strong>, que primero se pregunte por el de 1993, luego por el de 1999, luego saltemos al 2010, luego al 2021-2022 y por último 2027: así quedarían por orden cronológico, y aquí sí tendría sentido hacerlo secuencial.</p>
+          <p>En cambio, para preguntar sobre <strong>platos de la gastronomía gallega</strong> da igual preguntar primero por los pimientos de Padrón y luego por el pulpo á feira que al revés.</p>
         </div>
       </article>
 
@@ -375,6 +377,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260810-7"></script>
+  <script src="js/app.js?v=20260810-8"></script>
 </body>
 </html>

@@ -87,9 +87,13 @@ Elegid vuestro número en el desplegable y se mostrarán las coordenadas de inic
   /* ---------- Instrucciones: etapas ---------- */
   instruccionesEtapasTitulo: "Instrucciones para las etapas",
   etapaSecuencialTitulo: "¿Etapas secuenciales o no secuenciales?",
-  etapaSecuencialTexto: `Hay que decidir si las 5 etapas de cada lab serán secuenciales o no secuenciales. Aquí solo lo dejamos señalado: la decisión se tomará en el grupo de WhatsApp.
+  etapaSecuencialTexto: `Parece que se va a decidir que cada cual decida si su lab es secuencial o no secuencial (la decisión final se tomará en el grupo de WhatsApp).
 
-Como referencia: el geoart de Portugal está formado por etapas secuenciales y el de Catalunya por etapas no secuenciales. Estaría bien ponernos de acuerdo para que todas sean iguales, secuenciales o no.`,
+Un apunte importante: todas las etapas se harán desde un único punto, sin necesidad de moverse del sitio. Así que, en la práctica, daría igual hacer el lab secuencial o no.
+
+La única razón para decantarse por el secuencial sería si, por algún motivo, queremos que las preguntas tengan un orden. Por ejemplo, si queremos preguntar algo sobre los años xacobeos, que primero se pregunte por el de 1993, luego por el de 1999, luego saltemos al 2010, luego al 2021-2022 y por último 2027: así quedarían por orden cronológico, y aquí sí tendría sentido hacerlo secuencial.
+
+En cambio, para preguntar sobre platos de la gastronomía gallega da igual preguntar primero por los pimientos de Padrón y luego por el pulpo á feira que al revés.`,
 
   etapaNombreTitulo: "Nombre de la etapa",
   etapaNombreTexto: `Cada uno pondrá el nombre que quiera a cada etapa, acorde con la pregunta o la temática que vaya a utilizar. Ha de ser un texto de 50 caracteres como máximo.`,
