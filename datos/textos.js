@@ -16,7 +16,7 @@
 window.TEXTOS = {
 
   /* ---------- Cabecera ---------- */
-  cabeceraTexto: "GEOGALICIA - ROTEIRO LAB ATLÁNTICO",
+  cabeceraTexto: "GEOGALICIA: ROTEIRO LAB ATLÁNTICO",
 
   /* ---------- Introducción ---------- */
   introTitulo: "¿Qué es esta página?",

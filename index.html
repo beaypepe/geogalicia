@@ -24,7 +24,7 @@
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260810-8';
+      var VER = '20260810-9';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -40,19 +40,19 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-8">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-8">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-8">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-8">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-9">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-9">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-9">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-9">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260810-8">
+  <link rel="stylesheet" href="css/estilos.css?v=20260810-9">
 </head>
 <body>
 
   <!-- Cabecera -->
   <header class="cabecera">
     <div class="cabecera-texto">
-      <h1 data-texto="cabeceraTexto">GEOGALICIA - ROTEIRO LAB ATLÁNTICO</h1>
+      <h1 data-texto="cabeceraTexto">GEOGALICIA: ROTEIRO LAB ATLÁNTICO</h1>
     </div>
     <div class="cabecera-datos">
       <span class="dato-clave">29 equipos</span>
@@ -188,7 +188,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260810-8" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260810-9" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -196,9 +196,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260810-8" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260810-9" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260810-8" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260810-9" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -377,6 +377,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260810-8"></script>
+  <script src="js/app.js?v=20260810-9"></script>
 </body>
 </html>
