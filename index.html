@@ -24,7 +24,7 @@
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260810-3';
+      var VER = '20260810-4';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -40,12 +40,12 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-3">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-3">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-3">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-3">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-4">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-4">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-4">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-4">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260810-3">
+  <link rel="stylesheet" href="css/estilos.css?v=20260810-4">
 </head>
 <body>
 
@@ -140,11 +140,11 @@
           <h3 data-texto="labNombreTitulo">Nombre del Adventure Lab</h3>
         </div>
         <div class="cuerpo-texto" id="texto-lab-nombre">
-          <p>Poned como nombre del lab: <strong>«GeoGalicia: Roteiro Lab Atlántico #XX»</strong>.</p>
-          <p><strong>XX son los dos dígitos del número de vuestro lab</strong> (del 01 al 61): cada uno ya sabe qué números ha de utilizar. Por ejemplo, si vuestro lab es el número 7, el nombre será «GeoGalicia: Roteiro Lab Atlántico #07».</p>
+          <p>Poned como nombre del lab: <strong>«GeoGalicia #XX»</strong>.</p>
+          <p><strong>XX son los dos dígitos del número de vuestro lab</strong> (del 01 al 61): cada uno ya sabe qué números ha de utilizar. Por ejemplo, si vuestro lab es el número 7, el nombre será «GeoGalicia #07».</p>
         </div>
         <div class="valor-copiar">
-          <code id="valor-nombre-lab">GeoGalicia: Roteiro Lab Atlántico #XX</code>
+          <code id="valor-nombre-lab">GeoGalicia #XX</code>
           <button type="button" class="btn-copiar" data-copiar="valor-nombre-lab">📋 Copiar</button>
         </div>
       </article>
@@ -186,7 +186,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260810-3" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260810-4" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -194,9 +194,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260810-3" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260810-4" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260810-3" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260810-4" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -372,6 +372,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260810-3"></script>
+  <script src="js/app.js?v=20260810-4"></script>
 </body>
 </html>

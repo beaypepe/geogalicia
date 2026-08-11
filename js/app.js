@@ -223,7 +223,7 @@
     const btnTodas = $('#btn-copiar-todas');
     if (btnTodas) {
       btnTodas.dataset.copiarTexto = puntos
-        .map((p) => 'GeoGalicia: Roteiro Lab Atlántico #' + p.num + ': ' + p.cruda)
+        .map((p) => 'GeoGalicia #' + p.num + ': ' + p.cruda)
         .join('\n');
     }
   }
@@ -235,7 +235,7 @@
     puntos.forEach((p) => {
       const op = document.createElement('option');
       op.value = p.num;
-      op.textContent = 'GeoGalicia: Roteiro Lab Atlántico #' + p.num;
+      op.textContent = 'GeoGalicia #' + p.num;
       sel.appendChild(op);
     });
     const resultado = $('#inicio-resultado');
@@ -299,7 +299,7 @@
       });
       const contenido =
         '<div class="popup-lab">' +
-        '<div class="popup-titulo"><strong>GeoGalicia: Roteiro Lab Atlántico #' + p.num + '</strong></div>' +
+        '<div class="popup-titulo"><strong>GeoGalicia #' + p.num + '</strong></div>' +
         '<div class="popup-coords">' + escapar(p.cruda) + '</div>' +
         '<button type="button" class="btn-copiar btn-mini" data-copiar-texto="' + escapar(p.cruda) + '">📋 Copiar coordenadas</button>' +
         '</div>';

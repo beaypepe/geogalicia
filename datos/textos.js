@@ -55,10 +55,10 @@ Cuando se haya decidido, lo pondremos en esta página.`,
   /* ---------- Instrucciones: Adventure Lab ---------- */
   instruccionesLabTitulo: "Instrucciones para el Adventure Lab",
   labNombreTitulo: "Nombre del Adventure Lab",
-  labNombreValor: "GeoGalicia: Roteiro Lab Atlántico #XX",
-  labNombreTexto: `Poned como nombre del lab: «GeoGalicia: Roteiro Lab Atlántico #XX».
+  labNombreValor: "GeoGalicia #XX",
+  labNombreTexto: `Poned como nombre del lab: «GeoGalicia #XX».
 
-XX son los dos dígitos del número de vuestro lab (del 01 al 61): cada uno ya sabe qué números ha de utilizar. Por ejemplo, si vuestro lab es el número 7, el nombre será «GeoGalicia: Roteiro Lab Atlántico #07».`,
+XX son los dos dígitos del número de vuestro lab (del 01 al 61): cada uno ya sabe qué números ha de utilizar. Por ejemplo, si vuestro lab es el número 7, el nombre será «GeoGalicia #07».`,
 
   labDescripcionTitulo: "Descripción del Adventure Lab",
   labDescripcionTexto: `La descripción es común para todos los labs y ya está acordada (esta es la versión en castellano que se propuso hace tiempo). Si en la votación del idioma sale el gallego, habrá que traducirla; y si alguien quiere proponer otra cosa, que lo diga por el grupo de WhatsApp.
