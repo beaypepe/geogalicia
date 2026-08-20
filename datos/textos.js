@@ -36,15 +36,15 @@ Aquí encontraréis el mapa con los 61 puntos del geoart, las coordenadas en for
   listaTitulo: "Coordenadas de los 61 puntos",
   listaNota: "En formato geocaching, listas para copiar. Cada fila tiene su botón y, arriba, puedes copiarlas todas de una vez.",
 
-  /* ---------- Aviso del plazo ---------- */
-  plazoTitulo: "🗓️ Pongámonos de acuerdo en un plazo",
-  plazo: `Ahora mismo estamos votando en el grupo de WhatsApp para ponernos de acuerdo en un plazo: si aún no has votado, entra en el grupo y vota. Así nos haremos una idea de los plazos y podremos decidir una fecha para activar los labs, más o menos, a la vez.
+  /* ---------- Fecha de presentación del geoart ---------- */
+  plazoTitulo: "🗓️ Pongámonos de acuerdo en una fecha para presentar el geoart",
+  plazo: `Ahora mismo estamos votando en el grupo de WhatsApp la fecha para celebrar un evento en el Parque Central de Galicia y presentar el geoart. Si aún no has votado, entra en el grupo y vota: elegiremos el día en el que pueda asistir el mayor número de personas.
 
-Aunque haya gente que aún no se ha pronunciado y no sepamos cuándo tendrá listos sus labs, seguimos adelante con el proyecto. Si se decide una fecha para el evento y aún no están listos todos los labs, habrá que decidir entre todos qué hacemos al respecto.
+La idea es que todos los Adventure Labs estén listos para la fecha que se vote, para poder presentar el geoart completo. Aún hay algún geocacher que no ha dicho cuándo tendrá listo su lab; si llega el día del evento y todavía quedan labs por crear, decidiremos entonces entre todos cómo actuar.
 
-Además, se podría aprovechar para crear un evento en el Parque Central de Galicia para presentar el proyecto. Estaría bien que la gente propusiera fechas para que podamos asistir cuantos más mejor, teniendo en cuenta que para crear el evento se necesitan 15 días de antelación para enviarlo a revisión.
+Será un único evento de presentación del geoart. No tiene sentido organizar varios eventos de presentación para quienes no puedan asistir el día elegido: quienes no puedan ir podrán organizarse para visitar el parque otro día. Si alguien quiere crear por su cuenta otro evento allí para reunirse y hacer los labs, adelante, pero no formará parte de la presentación del geoart.
 
-¡Dad vuestra opinión en el grupo!`,
+Recordad que el evento debe enviarse a revisión con al menos 15 días de antelación. ¡Dad vuestra opinión en el grupo!`,
 
   /* ---------- Votación del idioma (ya decidido) ---------- */
   votacionTitulo: "🗳️ Idioma de los labs: se decidió el gallego",
