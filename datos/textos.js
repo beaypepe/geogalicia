@@ -38,7 +38,9 @@ Aquí encontraréis el mapa con los 61 puntos del geoart, las coordenadas en for
 
   /* ---------- Aviso del plazo ---------- */
   plazoTitulo: "🗓️ Pongámonos de acuerdo en un plazo",
-  plazo: `Ya estamos todos listos para crear nuestros Adventure Labs. Sería buena idea que cada uno indicara en el grupo de WhatsApp cuándo podría tener listos sus labs: así nos haremos una idea de los plazos y podremos ponernos de acuerdo en una fecha para activarlos todos, más o menos, a la vez.
+  plazo: `Ahora mismo estamos votando en el grupo de WhatsApp para ponernos de acuerdo en un plazo: si aún no has votado, entra en el grupo y vota. Así nos haremos una idea de los plazos y podremos decidir una fecha para activar los labs, más o menos, a la vez.
+
+Aunque haya gente que aún no se ha pronunciado y no sepamos cuándo tendrá listos sus labs, seguimos adelante con el proyecto. Si se decide una fecha para el evento y aún no están listos todos los labs, habrá que decidir entre todos qué hacemos al respecto.
 
 Además, se podría aprovechar para crear un evento en el Parque Central de Galicia para presentar el proyecto. Estaría bien que la gente propusiera fechas para que podamos asistir cuantos más mejor, teniendo en cuenta que para crear el evento se necesitan 15 días de antelación para enviarlo a revisión.
 
@@ -46,11 +48,11 @@ Además, se podría aprovechar para crear un evento en el Parque Central de Gali
 
   /* ---------- Votación del idioma (ya decidido) ---------- */
   votacionTitulo: "🗳️ Idioma de los labs: se decidió el gallego",
-  votacion: `En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en gallego. Esa es la opción por defecto para todos.
+  votacion: `En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en gallego. Aun así, hay gente que lo va a hacer en castellano y gente que lo va a hacer bilingüe, así que, en resumen: cada uno haga lo que quiera.
 
-Dicho esto, si alguien prefiere hacer su lab en castellano, en otro idioma o bilingüe, allá él o ella: cada equipo es libre de elegir, pero la decisión mayoritaria es el gallego.
+El que lo quiera en gallego, puede copiar la descripción que hay en esta página; el que lo quiera en castellano, puede traducirla; el que lo quiera bilingüe, que ponga las dos descripciones; y si alguien quiere añadir más idiomas, que lo haga.
 
-La descripción común ya está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.`,
+La descripción común está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.`,
 
   /* ---------- Instrucciones: Adventure Lab ---------- */
   instruccionesLabTitulo: "Instrucciones para el Adventure Lab",
@@ -87,7 +89,7 @@ Elegid vuestro número en el desplegable y se mostrarán las coordenadas de inic
   /* ---------- Instrucciones: etapas ---------- */
   instruccionesEtapasTitulo: "Instrucciones para las etapas",
   etapaSecuencialTitulo: "¿Etapas secuenciales o no secuenciales?",
-  etapaSecuencialTexto: `Parece que se va a decidir que cada cual decida si su lab es secuencial o no secuencial (la decisión final se tomará en el grupo de WhatsApp).
+  etapaSecuencialTexto: `En el grupo de WhatsApp se ha votado y se ha decidido que cada cual decida si su lab es secuencial o no secuencial, tal y como estaba previsto.
 
 Un apunte importante: todas las etapas se harán desde un único punto, sin necesidad de moverse del sitio. Así que, en la práctica, daría igual hacer el lab secuencial o no.
 

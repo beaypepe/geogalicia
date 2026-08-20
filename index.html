@@ -24,7 +24,7 @@
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260810-9';
+      var VER = '20260820-1';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -40,12 +40,12 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260810-9">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260810-9">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260810-9">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260810-9">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260820-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260820-1">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260820-1">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260820-1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260810-9">
+  <link rel="stylesheet" href="css/estilos.css?v=20260820-1">
 </head>
 <body>
 
@@ -114,7 +114,8 @@
     <section class="aviso aviso-plazo" id="aviso-plazo" aria-labelledby="plazo-titulo">
       <h2 id="plazo-titulo" data-texto="plazoTitulo">🗓️ Pongámonos de acuerdo en un plazo</h2>
       <div class="cuerpo-texto" id="texto-plazo">
-        <p>Ya estamos todos listos para crear nuestros Adventure Labs. Sería buena idea que <strong>cada uno indicara en el grupo de WhatsApp cuándo podría tener listos sus labs</strong>: así nos haremos una idea de los plazos y podremos ponernos de acuerdo en una fecha para activarlos todos, más o menos, a la vez.</p>
+        <p>Ahora mismo estamos <strong>votando en el grupo de WhatsApp</strong> para ponernos de acuerdo en un plazo: <strong>si aún no has votado, entra en el grupo y vota</strong>. Así nos haremos una idea de los plazos y podremos decidir una fecha para activar los labs, más o menos, a la vez.</p>
+        <p>Aunque haya gente que aún no se ha pronunciado y no sepamos cuándo tendrá listos sus labs, <strong>seguimos adelante con el proyecto</strong>. Si se decide una fecha para el evento y aún no están listos todos los labs, habrá que decidir entre todos qué hacemos al respecto.</p>
         <p>Además, se podría aprovechar para crear un <strong>evento en el Parque Central de Galicia</strong> para presentar el proyecto. Estaría bien que la gente propusiera fechas para que podamos asistir cuantos más mejor, teniendo en cuenta que para crear el evento se necesitan <strong>15 días de antelación</strong> para enviarlo a revisión.</p>
         <p>¡Dad vuestra opinión en el grupo!</p>
       </div>
@@ -124,9 +125,9 @@
     <section class="aviso aviso-votacion" id="votacion" aria-labelledby="votacion-titulo">
       <h2 id="votacion-titulo" data-texto="votacionTitulo">🗳️ Idioma de los labs: se decidió el gallego</h2>
       <div class="cuerpo-texto" id="texto-votacion">
-        <p>En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en <strong>gallego</strong>. Esa es la opción por defecto para todos.</p>
-        <p>Dicho esto, si alguien prefiere hacer su lab en <strong>castellano</strong>, en otro idioma o <strong>bilingüe</strong>, allá él o ella: cada equipo es libre de elegir, pero la decisión mayoritaria es el gallego.</p>
-        <p>La descripción común ya está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.</p>
+        <p>En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en <strong>gallego</strong>. Aun así, hay gente que lo va a hacer en <strong>castellano</strong> y gente que lo va a hacer <strong>bilingüe</strong>, así que, en resumen: <strong>cada uno haga lo que quiera</strong>.</p>
+        <p>El que lo quiera en <strong>gallego</strong>, puede copiar la descripción que hay en esta página; el que lo quiera en <strong>castellano</strong>, puede traducirla; el que lo quiera <strong>bilingüe</strong>, que ponga las dos descripciones; y si alguien quiere añadir más idiomas, que lo haga.</p>
+        <p>La descripción común está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.</p>
       </div>
     </section>
 
@@ -188,7 +189,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260810-9" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260820-1" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -196,9 +197,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260810-9" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260820-1" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260810-9" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260820-1" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -248,7 +249,7 @@
           <h3 data-texto="etapaSecuencialTitulo">¿Etapas secuenciales o no secuenciales?</h3>
         </div>
         <div class="cuerpo-texto" id="texto-etapa-secuencial">
-          <p>Parece que se va a decidir que <strong>cada cual decida si su lab es secuencial o no secuencial</strong> (la decisión final se tomará en el grupo de WhatsApp).</p>
+          <p>En el grupo de WhatsApp se ha votado y se ha decidido que <strong>cada cual decida si su lab es secuencial o no secuencial</strong>, tal y como estaba previsto.</p>
           <p>Un apunte importante: todas las etapas se harán <strong>desde un único punto</strong>, sin necesidad de moverse del sitio. Así que, en la práctica, <strong>daría igual hacer el lab secuencial o no</strong>.</p>
           <p>La única razón para decantarse por el secuencial sería si, por algún motivo, queremos que las preguntas tengan un <strong>orden</strong>. Por ejemplo, si queremos preguntar algo sobre los <strong>años xacobeos</strong>, que primero se pregunte por el de 1993, luego por el de 1999, luego saltemos al 2010, luego al 2021-2022 y por último 2027: así quedarían por orden cronológico, y aquí sí tendría sentido hacerlo secuencial.</p>
           <p>En cambio, para preguntar sobre <strong>platos de la gastronomía gallega</strong> da igual preguntar primero por los pimientos de Padrón y luego por el pulpo á feira que al revés.</p>
@@ -377,6 +378,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260810-9"></script>
+  <script src="js/app.js?v=20260820-1"></script>
 </body>
 </html>
