@@ -346,6 +346,48 @@ body {
 
 .marco-descripcion .btn-copiar { margin-top: 10px; }
 
+/* Descripción común en dos idiomas: gallego (izquierda) y castellano (derecha) */
+.descripciones-idiomas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.descripciones-idiomas .marco-descripcion {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.descripciones-idiomas .marco-descripcion .cuerpo-texto { flex: 1 1 auto; }
+
+.descripciones-idiomas .marco-descripcion .btn-copiar {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.titulo-idioma {
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e3e8ef;
+  font-size: 0.95rem;
+  color: #1f3550;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.titulo-idioma span {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #6b7a8c;
+}
+
+@media (max-width: 720px) {
+  .descripciones-idiomas { grid-template-columns: 1fr; }
+}
+
 /* Imagen de portada */
 .figura-logo {
   margin: 14px 0 0;
@@ -432,6 +474,15 @@ body {
   color: #143c5c;
 }
 
+/* Desplegable + coordenadas + botón: en una sola línea si caben;
+   en pantallas pequeñas, las coordenadas bajan debajo del desplegable. */
+.selector-inicio-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
 .select-punto {
   font-size: 0.95rem;
   font-family: inherit;
@@ -440,12 +491,13 @@ body {
   border-radius: 8px;
   background: #ffffff;
   color: #1f2937;
-  width: 100%;
+  flex: 0 1 auto;
+  width: auto;
+  min-width: 260px;
   max-width: 340px;
 }
 
 .inicio-resultado {
-  margin-top: 12px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -463,6 +515,28 @@ body {
   border: 1px solid #dbe7f2;
   border-radius: 8px;
   padding: 8px 12px;
+}
+
+/* Móviles y pantallas estrechas: todo apilado, a lo ancho */
+@media (max-width: 720px) {
+  .selector-inicio-fila {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .select-punto {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .inicio-resultado { justify-content: center; }
+
+  /* Las coordenadas ocupan toda la línea y el botón queda debajo */
+  .inicio-coords {
+    flex: 1 1 100%;
+    text-align: center;
+  }
 }
 
 /* Mapa de las etapas */

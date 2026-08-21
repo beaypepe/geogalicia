@@ -1,8 +1,8 @@
 /* ============================================================
    GEOGALICIA: ROTEIRO LAB ATLÁNTICO — lógica de la página
    - Carga los textos desde datos/textos.js (window.TEXTOS)
-   - Lee los datos desde: datos/puntos.txt, datos/descripcion.txt,
-     datos/etapas.txt
+   - Lee los datos desde: datos/puntos.txt, datos/descripcion.txt
+     (gallego), datos/descripcion-es.txt (castellano), datos/etapas.txt
    - Construye los mapas (Leaflet), el listado de coordenadas,
      y activa los botones de copiar.
    ============================================================ */
@@ -439,13 +439,16 @@
     try {
       const t = Date.now();
       const sinCaché = { cache: 'no-store' };
-      const [puntosTexto, descripcion, etapasTexto] = await Promise.all([
+      const [puntosTexto, descripcionGa, descripcionEs, etapasTexto] = await Promise.all([
         fetch('datos/puntos.txt?t=' + t, sinCaché).then((r) => { if (!r.ok) throw new Error('puntos.txt'); return r.text(); }),
         fetch('datos/descripcion.txt?t=' + t, sinCaché).then((r) => { if (!r.ok) throw new Error('descripcion.txt'); return r.text(); }),
+        fetch('datos/descripcion-es.txt?t=' + t, sinCaché).then((r) => { if (!r.ok) throw new Error('descripcion-es.txt'); return r.text(); }),
         fetch('datos/etapas.txt?t=' + t, sinCaché).then((r) => { if (!r.ok) throw new Error('etapas.txt'); return r.text(); })
       ]);
 
-      rellenarLargo('#descripcion-texto', descripcion);
+      // Descripción común: versión en gallego (izquierda) y en castellano (derecha)
+      rellenarLargo('#descripcion-texto-ga', descripcionGa);
+      rellenarLargo('#descripcion-texto-es', descripcionEs);
 
       const puntos = leerPuntos(puntosTexto);
       const etapas = leerEtapas(etapasTexto);

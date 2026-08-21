@@ -24,7 +24,7 @@
        (así siempre se ve la última versión, sin tener que hacer Ctrl+F5). -->
   <script>
     (function () {
-      var VER = '20260820-1';
+      var VER = '20260821-1';
       try {
         fetch('version.txt?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { return r.text(); })
@@ -40,12 +40,12 @@
     })();
   </script>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260820-1">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260820-1">
-  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260820-1">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260820-1">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=20260821-1">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=20260821-1">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png?v=20260821-1">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=20260821-1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
-  <link rel="stylesheet" href="css/estilos.css?v=20260820-1">
+  <link rel="stylesheet" href="css/estilos.css?v=20260821-1">
 </head>
 <body>
 
@@ -65,7 +65,7 @@
 
     <!-- Aviso de error al cargar datos (solo visible si algo falla) -->
     <div id="banner-error" role="alert">
-      ⚠️ No se han podido cargar los datos (datos/puntos.txt, datos/descripcion.txt o datos/etapas.txt).
+      ⚠️ No se han podido cargar los datos (datos/puntos.txt, datos/descripcion.txt, datos/descripcion-es.txt o datos/etapas.txt).
       Comprueba que la página se está sirviendo desde un servidor web (p. ej. GitHub Pages) y no abierta como archivo local.
     </div>
 
@@ -126,8 +126,8 @@
       <h2 id="votacion-titulo" data-texto="votacionTitulo">🗳️ Idioma de los labs: se decidió el gallego</h2>
       <div class="cuerpo-texto" id="texto-votacion">
         <p>En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en <strong>gallego</strong>. Aun así, hay gente que lo va a hacer en <strong>castellano</strong> y gente que lo va a hacer <strong>bilingüe</strong>, así que, en resumen: <strong>que cada uno haga lo que quiera</strong>.</p>
-        <p>El que lo quiera en <strong>gallego</strong>, puede copiar la descripción que hay en esta página; el que lo quiera en <strong>castellano</strong>, puede traducirla; el que lo quiera <strong>bilingüe</strong>, que ponga las dos descripciones; y si alguien quiere añadir más idiomas, que lo haga.</p>
-        <p>La descripción común está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.</p>
+        <p>El que lo quiera en <strong>gallego</strong> y el que lo quiera en <strong>castellano</strong> tienen más abajo la descripción común en los dos idiomas, lista para copiar; el que lo quiera <strong>bilingüe</strong>, que ponga las dos; y si alguien quiere añadir más idiomas, que lo haga.</p>
+        <p>La versión de referencia sigue siendo la gallega, y la castellana es su traducción. Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.</p>
       </div>
     </section>
 
@@ -156,25 +156,46 @@
           <h3 data-texto="labDescripcionTitulo">Descripción del Adventure Lab</h3>
         </div>
         <div class="cuerpo-texto" id="texto-lab-descripcion">
-          <p>La descripción es <strong>común para todos los labs</strong> y ya está acordada: está en <strong>gallego</strong>, el idioma elegido por mayoría en el grupo de WhatsApp.</p>
-          <p>Si alguien hace su lab en otro idioma, tendrá que traducirla, pero esta es la versión de referencia. Y si alguien quiere proponer algún cambio, que lo diga por el grupo de WhatsApp.</p>
-          <p>El texto está listo para copiar y pegar tal cual en vuestro lab:</p>
+          <p>La descripción es <strong>común para todos los labs</strong> y ya está acordada: la versión de referencia está en <strong>gallego</strong>, el idioma elegido por mayoría en el grupo de WhatsApp.</p>
+          <p>Aquí tenéis las <strong>dos versiones</strong>: en gallego y en castellano (la misma descripción, traducida). Cada uno copia la que quiera; quien lo haga <strong>bilingüe</strong>, que pegue las dos.</p>
+          <p>Si alguien quiere proponer algún cambio en cualquiera de las dos, que lo diga por el grupo de WhatsApp. Los textos están listos para copiar y pegar tal cual en vuestro lab:</p>
         </div>
-        <div class="marco-descripcion">
-          <div class="cuerpo-texto" id="descripcion-texto">
-            <p>¡Benvid@ a unha viaxe única polo corazón de Galicia!</p>
-            <p>A través deste geoart con 61 Adventure Labs formando a palabra GALICIA sobre o Atlántico, propómosche descubrir a nosa terra desde unha perspectiva diferente.</p>
-            <p>🌿 Natureza, cultura, historia e sabor entrelázanse en cada un dos retos. Convidámoste a responder preguntas que te levarán por:</p>
-            <p>- Rías, montes e illas</p>
-            <p>- Pratos típicos, mariscos e sobremesas</p>
-            <p>- Festas populares, lendas e músicas tradicionais</p>
-            <p>- Monumentos, castelos e rutas do Camiño</p>
-            <p>- Palabras e expresións en galego</p>
-            <p>- Oficios, produtos con D.O. e arquitectura típica</p>
-            <p>Cada Adventure Lab consta de 5 preguntas que te mergullan na riqueza xeográfica e cultural de Galicia.</p>
-            <p>🌍 Un proxecto colaborativo de case 30 equipos galegos con amor pola súa terra e ganas de compartila contigo.</p>
+        <div class="descripciones-idiomas">
+          <div class="marco-descripcion">
+            <h4 class="titulo-idioma">Galego <span>(versión de referencia)</span></h4>
+            <div class="cuerpo-texto" id="descripcion-texto-ga">
+              <p>¡Benvid@ a unha viaxe única polo corazón de Galicia!</p>
+              <p>A través deste geoart con 61 Adventure Labs formando a palabra GALICIA sobre o Atlántico, propómosche descubrir a nosa terra desde unha perspectiva diferente.</p>
+              <p>🌿 Natureza, cultura, historia e sabor entrelázanse en cada un dos retos. Convidámoste a responder preguntas que te levarán por:</p>
+              <p>- Rías, montes e illas</p>
+              <p>- Pratos típicos, mariscos e sobremesas</p>
+              <p>- Festas populares, lendas e músicas tradicionais</p>
+              <p>- Monumentos, castelos e rutas do Camiño</p>
+              <p>- Palabras e expresións en galego</p>
+              <p>- Oficios, produtos con D.O. e arquitectura típica</p>
+              <p>Cada Adventure Lab consta de 5 preguntas que te mergullan na riqueza xeográfica e cultural de Galicia.</p>
+              <p>🌍 Un proxecto colaborativo de case 30 equipos galegos con amor pola súa terra e ganas de compartila contigo.</p>
+            </div>
+            <button type="button" class="btn-copiar" data-copiar="descripcion-texto-ga">📋 Copiar en gallego</button>
           </div>
-          <button type="button" class="btn-copiar" data-copiar="descripcion-texto">📋 Copiar descripción</button>
+
+          <div class="marco-descripcion">
+            <h4 class="titulo-idioma">Castellano <span>(traducción)</span></h4>
+            <div class="cuerpo-texto" id="descripcion-texto-es">
+              <p>¡Bienvenid@ a un viaje único por el corazón de Galicia!</p>
+              <p>A través de este geoart con 61 Adventure Labs formando la palabra GALICIA sobre el Atlántico, te proponemos descubrir nuestra tierra desde una perspectiva diferente.</p>
+              <p>🌿 Naturaleza, cultura, historia y sabor se entrelazan en cada uno de los retos. Te invitamos a responder preguntas que te llevarán por:</p>
+              <p>- Rías, montes e islas</p>
+              <p>- Platos típicos, mariscos y postres</p>
+              <p>- Fiestas populares, leyendas y músicas tradicionales</p>
+              <p>- Monumentos, castillos y rutas del Camino</p>
+              <p>- Palabras y expresiones en gallego</p>
+              <p>- Oficios, productos con D.O. y arquitectura típica</p>
+              <p>Cada Adventure Lab consta de 5 preguntas que te sumergen en la riqueza geográfica y cultural de Galicia.</p>
+              <p>🌍 Un proyecto colaborativo de casi 30 equipos gallegos con amor por su tierra y ganas de compartirla contigo.</p>
+            </div>
+            <button type="button" class="btn-copiar" data-copiar="descripcion-texto-es">📋 Copiar en castellano</button>
+          </div>
         </div>
       </article>
 
@@ -189,7 +210,7 @@
           <p>Haz clic sobre la imagen para verla ampliada y poder descargarla.</p>
         </div>
         <figure class="figura-logo">
-          <img src="images/logo.png?v=20260820-1" id="img-portada" alt="Imagen de portada común (images/logo.png)"
+          <img src="images/logo.png?v=20260821-1" id="img-portada" alt="Imagen de portada común (images/logo.png)"
                title="Haz clic para ampliar">
           <figcaption>Imagen de portada común — 1080 × 1080 px (imagen elegida en el grupo)</figcaption>
         </figure>
@@ -197,9 +218,9 @@
         <!-- Modal para ampliar y descargar la imagen de portada -->
         <div class="modal-overlay" id="modal-portada" hidden>
           <div class="modal-contenido" role="dialog" aria-modal="true" aria-label="Imagen de portada ampliada">
-            <img src="images/logo.png?v=20260820-1" alt="Imagen de portada ampliada">
+            <img src="images/logo.png?v=20260821-1" alt="Imagen de portada ampliada">
             <div class="modal-botones">
-              <a class="btn-copiar" href="images/logo.png?v=20260820-1" download="logo.png">⬇️ Descargar imagen</a>
+              <a class="btn-copiar" href="images/logo.png?v=20260821-1" download="logo.png">⬇️ Descargar imagen</a>
               <button type="button" class="btn-copiar" id="btn-cerrar-modal">✖ Cerrar</button>
             </div>
           </div>
@@ -228,12 +249,14 @@
         </div>
         <div class="selector-inicio">
           <label for="select-punto">Vuestro número de lab:</label>
-          <select id="select-punto" class="select-punto">
-            <option value="" selected disabled>Elegid vuestro número (01–61)…</option>
-          </select>
-          <div class="inicio-resultado" id="inicio-resultado" hidden>
-            <span class="inicio-coords" id="inicio-coords"></span>
-            <button type="button" class="btn-copiar" id="btn-copiar-inicio">📋 Copiar coordenadas</button>
+          <div class="selector-inicio-fila">
+            <select id="select-punto" class="select-punto">
+              <option value="" selected disabled>Elegid vuestro número (01–61)…</option>
+            </select>
+            <div class="inicio-resultado" id="inicio-resultado" hidden>
+              <span class="inicio-coords" id="inicio-coords"></span>
+              <button type="button" class="btn-copiar" id="btn-copiar-inicio">📋 Copiar coordenadas</button>
+            </div>
           </div>
         </div>
       </article>
@@ -378,6 +401,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  <script src="js/app.js?v=20260820-1"></script>
+  <script src="js/app.js?v=20260821-1"></script>
 </body>
 </html>
