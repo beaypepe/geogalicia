@@ -48,7 +48,7 @@ Recordad que el evento debe enviarse a revisión con al menos 15 días de antela
 
   /* ---------- Votación del idioma (ya decidido) ---------- */
   votacionTitulo: "🗳️ Idioma de los labs: se decidió el gallego",
-  votacion: `En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en gallego. Aun así, hay gente que lo va a hacer en castellano y gente que lo va a hacer bilingüe, así que, en resumen: cada uno haga lo que quiera.
+  votacion: `En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en gallego. Aun así, hay gente que lo va a hacer en castellano y gente que lo va a hacer bilingüe, así que, en resumen: que cada uno haga lo que quiera.
 
 El que lo quiera en gallego, puede copiar la descripción que hay en esta página; el que lo quiera en castellano, puede traducirla; el que lo quiera bilingüe, que ponga las dos descripciones; y si alguien quiere añadir más idiomas, que lo haga.
 
