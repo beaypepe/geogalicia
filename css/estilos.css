@@ -108,6 +108,18 @@ body {
 }
 
 /* ---------- Avisos ---------- */
+.tarjeta-edicion {
+  border-left: 5px solid #0f6db1;
+  background: #f7fbff;
+}
+
+.tarjeta-edicion a {
+  color: #0b5f9e;
+  font-weight: 600;
+}
+
+.tarjeta-edicion a:hover { color: #084875; }
+
 .aviso {
   border-radius: 12px;
   padding: 18px 22px;
