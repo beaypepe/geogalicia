@@ -346,6 +346,48 @@ body {
 
 .marco-descripcion .btn-copiar { margin-top: 10px; }
 
+/* Descripción común en dos idiomas: gallego (izquierda) y castellano (derecha) */
+.descripciones-idiomas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.descripciones-idiomas .marco-descripcion {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.descripciones-idiomas .marco-descripcion .cuerpo-texto { flex: 1 1 auto; }
+
+.descripciones-idiomas .marco-descripcion .btn-copiar {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.titulo-idioma {
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e3e8ef;
+  font-size: 0.95rem;
+  color: #1f3550;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.titulo-idioma span {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #6b7a8c;
+}
+
+@media (max-width: 720px) {
+  .descripciones-idiomas { grid-template-columns: 1fr; }
+}
+
 /* Imagen de portada */
 .figura-logo {
   margin: 14px 0 0;

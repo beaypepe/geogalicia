@@ -5,7 +5,8 @@
    Cómo editar: cambia aquí cualquier texto y recarga la página.
    El nombre del lab, la descripción común y las coordenadas
    están en los archivos de la carpeta datos/:
-     - datos/descripcion.txt   (descripción común del Adventure Lab)
+     - datos/descripcion.txt      (descripción común en gallego)
+     - datos/descripcion-es.txt   (la misma descripción en castellano)
      - datos/puntos.txt        (coordenadas de los 61 puntos)
      - datos/etapas.txt        (coordenadas de las 5 etapas)
 
@@ -50,9 +51,9 @@ Recordad que el evento debe enviarse a revisión con al menos 15 días de antela
   votacionTitulo: "🗳️ Idioma de los labs: se decidió el gallego",
   votacion: `En el grupo de WhatsApp se ha votado y la mayoría ha decidido que los Adventure Labs se hagan en gallego. Aun así, hay gente que lo va a hacer en castellano y gente que lo va a hacer bilingüe, así que, en resumen: que cada uno haga lo que quiera.
 
-El que lo quiera en gallego, puede copiar la descripción que hay en esta página; el que lo quiera en castellano, puede traducirla; el que lo quiera bilingüe, que ponga las dos descripciones; y si alguien quiere añadir más idiomas, que lo haga.
+El que lo quiera en gallego y el que lo quiera en castellano tienen más abajo la descripción común en los dos idiomas, lista para copiar; el que lo quiera bilingüe, que ponga las dos; y si alguien quiere añadir más idiomas, que lo haga.
 
-La descripción común está en gallego (la tenéis más abajo, lista para copiar). Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.`,
+La versión de referencia sigue siendo la gallega, y la castellana es su traducción. Y si alguien quiere aportar algo o dar su opinión, el grupo de WhatsApp está para eso.`,
 
   /* ---------- Instrucciones: Adventure Lab ---------- */
   instruccionesLabTitulo: "Instrucciones para el Adventure Lab",
@@ -63,11 +64,11 @@ La descripción común está en gallego (la tenéis más abajo, lista para copia
 XX son los dos dígitos del número de vuestro lab (del 01 al 61): cada uno ya sabe qué números ha de utilizar. Por ejemplo, si vuestro lab es el número 7, el nombre será «GeoGalicia #07».`,
 
   labDescripcionTitulo: "Descripción del Adventure Lab",
-  labDescripcionTexto: `La descripción es común para todos los labs y ya está acordada: está en gallego, el idioma elegido por mayoría en el grupo de WhatsApp.
+  labDescripcionTexto: `La descripción es común para todos los labs y ya está acordada: la versión de referencia está en gallego, el idioma elegido por mayoría en el grupo de WhatsApp.
 
-Si alguien hace su lab en otro idioma, tendrá que traducirla, pero esta es la versión de referencia. Y si alguien quiere proponer algún cambio, que lo diga por el grupo de WhatsApp.
+Aquí tenéis las dos versiones: en gallego y en castellano (la misma descripción, traducida). Cada uno copia la que quiera; quien lo haga bilingüe, que pegue las dos.
 
-El texto está listo para copiar y pegar tal cual en vuestro lab:`,
+Si alguien quiere proponer algún cambio en cualquiera de las dos, que lo diga por el grupo de WhatsApp. Los textos están listos para copiar y pegar tal cual en vuestro lab:`,
 
   labImagenTitulo: "Imagen de portada",
   labImagenTexto: `La imagen de portada es común y ya está lista: es la imagen cuadrada de 1080×1080 que se propuso y se eligió en el grupo de WhatsApp.
