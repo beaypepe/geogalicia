@@ -37,15 +37,15 @@ Aquí encontraréis el mapa con los 61 puntos del geoart, las coordenadas en for
   listaTitulo: "Coordenadas de los 61 puntos",
   listaNota: "En formato geocaching, listas para copiar. Cada fila tiene su botón y, arriba, puedes copiarlas todas de una vez.",
 
-  /* ---------- Fecha de presentación del geoart ---------- */
-  plazoTitulo: "🗓️ Pongámonos de acuerdo en una fecha para presentar el geoart",
-  plazo: `Ahora mismo estamos votando en el grupo de WhatsApp la fecha para celebrar un evento en el Parque Central de Galicia y presentar el geoart. Si aún no has votado, entra en el grupo y vota: elegiremos el día en el que pueda asistir el mayor número de personas.
+  /* ---------- Últimos coletazos: labs pendientes y evento de presentación ---------- */
+  plazoTitulo: "🏁 Últimos coletazos",
+  plazo: `Llevamos un tiempo sin saber nada de Lucky13Nacho, así que hay que decidir qué hacemos con los labs que tenía asignados. De los dos que le correspondían, uno ya lo ha cogido GeoBalea, y nos queda el otro. Sería buena idea esperar un poco más a ver si Lucky13Nacho da señales de vida y hace él el lab que le corresponde, y si al final no sabemos nada de él, a ver si alguien se ofrece a hacer el que falta y así cerramos definitivamente la historia de los labs de Lucky13Nacho.
 
-La idea es que todos los Adventure Labs estén listos para la fecha que se vote, para poder presentar el geoart completo. Aún hay algún geocacher que no ha dicho cuándo tendrá listo su lab; si llega el día del evento y todavía quedan labs por crear, decidiremos entonces entre todos cómo actuar.
+Y por lo que respecta al evento de presentación, en el grupo de WhatsApp se ha hablado de celebrarlo aprovechando el Adventure Day 2026 (https://www.geocaching.com/blog/2026/09/adventure-day-2026-2/), que este año se celebra del 25 al 29 de noviembre. Como ya sabéis, será en el Parque Central de Galicia. Queda por decidir el día exacto: lo lógico sería el sábado 28 o el domingo 29, así que lo pondremos a votación en el grupo.
 
-Será un único evento de presentación del geoart. No tiene sentido organizar varios eventos de presentación para quienes no puedan asistir el día elegido: quienes no puedan ir podrán organizarse para visitar el parque otro día. Si alguien quiere crear por su cuenta otro evento allí para reunirse y hacer los labs, adelante, pero no formará parte de la presentación del geoart.
+Y para ir moviéndonos, dos temas a tener en cuenta: El primero, sobre los plazos: nos faltan poco más de dos meses, y de aquí al evento aún queda votar el día, crearlo, enviarlo a revisión (con al menos 15 días de antelación) y esperar a que lo publiquen. Así que, si queremos hacer un poco de difusión para que venga gente, convendría tenerlo publicado cuanto antes.
 
-Recordad que el evento debe enviarse a revisión con al menos 15 días de antelación. ¡Dad vuestra opinión en el grupo!`,
+El segundo, sobre la descripción del evento: no debería hablarse del geoart de labs, sino de una gran sorpresa que se presentará ese día. Tampoco hay que decirlo todo: con apuntar que se podrán completar ubicaciones de Adventure Lab y que el souvenir del Adventure Day se conseguirá de sobra, la gente se hará una idea de que habrá Adventure Labs… pero sin llegar a decirlo.`,
 
   /* ---------- Votación del idioma (ya decidido) ---------- */
   votacionTitulo: "🗳️ Idioma de los labs: se decidió el gallego",
